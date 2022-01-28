@@ -47,43 +47,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminDashboard.cs">
+    <Compile Include="CtrlAdminDash.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    <Compile Include="CtrlAdminDash.Designer.cs">
+      <DependentUpon>CtrlAdminDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="CusHome.cs">
+    <Compile Include="connection\CarBrand.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CusHome.Designer.cs">
-      <DependentUpon>CusHome.cs</DependentUpon>
+    <Compile Include="connection\CarBrand.Designer.cs">
+      <DependentUpon>CarBrand.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAdminPanel.cs">
+    <Compile Include="connection\connection.cs" />
+    <Compile Include="CtrlCusHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlCusHome.Designer.cs">
+      <DependentUpon>CtrlCusHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAdminPanel.Designer.cs">
-      <DependentUpon>FormAdminPanel.cs</DependentUpon>
+    <Compile Include="PanelAdmin.Designer.cs">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCusPanel.cs">
+    <Compile Include="PanelCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCusPanel.Designer.cs">
-      <DependentUpon>FormCusPanel.cs</DependentUpon>
+    <Compile Include="PanelCustomer.Designer.cs">
+      <DependentUpon>PanelCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlOrderDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlOrderDetails.Designer.cs">
+      <DependentUpon>CtrlOrderDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminDashboard.resx">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="CtrlAdminDash.resx">
+      <DependentUpon>CtrlAdminDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CusHome.resx">
-      <DependentUpon>CusHome.cs</DependentUpon>
+    <EmbeddedResource Include="CtrlCusHome.resx">
+      <DependentUpon>CtrlCusHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAdminPanel.resx">
-      <DependentUpon>FormAdminPanel.cs</DependentUpon>
+    <EmbeddedResource Include="PanelAdmin.resx">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCusPanel.resx">
-      <DependentUpon>FormCusPanel.cs</DependentUpon>
+    <EmbeddedResource Include="PanelCustomer.resx">
+      <DependentUpon>PanelCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlOrderDetails.resx">
+      <DependentUpon>CtrlOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,12 +124,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="BLL\BLL.csproj">
-      <Project>{f438306e-62e5-4c06-97eb-04eacbde27e7}</Project>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{3238226e-affe-4372-b878-1f0789e3b67c}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="DAL\DAL.csproj">
-      <Project>{0f5e303e-aa8a-483a-842e-ae2145c2f93b}</Project>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{f8ec65ff-c6b0-43b7-97d7-ded21b5260da}</Project>
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
