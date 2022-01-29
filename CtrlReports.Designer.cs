@@ -1,6 +1,6 @@
 ﻿namespace abcCarTradersV1
 {
-    partial class CtrlOrderDetails
+    partial class CtrlReports
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,22 +35,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(21, 16);
+            this.label1.Location = new System.Drawing.Point(23, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 25);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Car Order Details";
+            this.label1.Size = new System.Drawing.Size(98, 28);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Reports";
             // 
-            // CtrlOrderDetails
+            // reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.label1);
-            this.Name = "CtrlOrderDetails";
+            this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "reports";
             this.Size = new System.Drawing.Size(977, 626);
             this.ResumeLayout(false);
             this.PerformLayout();

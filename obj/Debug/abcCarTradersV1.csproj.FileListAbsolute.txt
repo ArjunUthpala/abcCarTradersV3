@@ -39,3 +39,4 @@ C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.Core
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.CopyComplete
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.exe
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.pdb
+C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlReports.resources

@@ -47,8 +47,11 @@
             this.CurrentTabIndicator = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.ctrlCarDetails = new abcCarTradersV1.CtrlCarDetails();
+            this.ctrlCarPartsDetails1 = new abcCarTradersV1.CtrlCarPartsDetails();
+            this.ctrlReports1 = new abcCarTradersV1.CtrlReports();
             this.ctrlAdminDash2 = new abcCarTradersV1.CtrlAdminDash();
+            this.ctrlCarDetails = new abcCarTradersV1.CtrlCarDetails();
+            this.ctrlOrderDetails1 = new abcCarTradersV1.CtrlOrderDetails();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
@@ -259,6 +262,7 @@
             this.btnReports.Text = "        Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnDash
             // 
@@ -297,15 +301,25 @@
             this.panel5.Size = new System.Drawing.Size(0, 662);
             this.panel5.TabIndex = 2;
             // 
-            // ctrlCarDetails11
+            // ctrlCarPartsDetails1
             // 
-            this.ctrlCarDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.ctrlCarDetails.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlCarDetails.Location = new System.Drawing.Point(289, 76);
-            this.ctrlCarDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ctrlCarDetails.Name = "ctrlCarDetails11";
-            this.ctrlCarDetails.Size = new System.Drawing.Size(977, 626);
-            this.ctrlCarDetails.TabIndex = 4;
+            this.ctrlCarPartsDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlCarPartsDetails1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCarPartsDetails1.Location = new System.Drawing.Point(289, 76);
+            this.ctrlCarPartsDetails1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlCarPartsDetails1.Name = "ctrlCarPartsDetails1";
+            this.ctrlCarPartsDetails1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlCarPartsDetails1.TabIndex = 7;
+            // 
+            // ctrlReports1
+            // 
+            this.ctrlReports1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlReports1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlReports1.Location = new System.Drawing.Point(289, 76);
+            this.ctrlReports1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlReports1.Name = "ctrlReports1";
+            this.ctrlReports1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlReports1.TabIndex = 6;
             // 
             // ctrlAdminDash2
             // 
@@ -318,12 +332,34 @@
             this.ctrlAdminDash2.Size = new System.Drawing.Size(978, 629);
             this.ctrlAdminDash2.TabIndex = 5;
             // 
+            // ctrlCarDetails
+            // 
+            this.ctrlCarDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlCarDetails.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCarDetails.Location = new System.Drawing.Point(289, 76);
+            this.ctrlCarDetails.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlCarDetails.Name = "ctrlCarDetails";
+            this.ctrlCarDetails.Size = new System.Drawing.Size(977, 626);
+            this.ctrlCarDetails.TabIndex = 4;
+            // 
+            // ctrlOrderDetails1
+            // 
+            this.ctrlOrderDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlOrderDetails1.Location = new System.Drawing.Point(289, 76);
+            this.ctrlOrderDetails1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlOrderDetails1.Name = "ctrlOrderDetails1";
+            this.ctrlOrderDetails1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlOrderDetails1.TabIndex = 8;
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.ctrlOrderDetails1);
+            this.Controls.Add(this.ctrlCarPartsDetails1);
+            this.Controls.Add(this.ctrlReports1);
             this.Controls.Add(this.ctrlAdminDash2);
             this.Controls.Add(this.ctrlCarDetails);
             this.Controls.Add(this.panel5);
@@ -335,6 +371,7 @@
             this.Name = "AdminPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AdminPanel_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -369,6 +406,9 @@
    
         private CtrlCarDetails ctrlCarDetails;
         private CtrlAdminDash ctrlAdminDash2;
+        private CtrlReports ctrlReports1;
+        private CtrlCarPartsDetails ctrlCarPartsDetails1;
+        private CtrlOrderDetails ctrlOrderDetails1;
     }
 }
 
