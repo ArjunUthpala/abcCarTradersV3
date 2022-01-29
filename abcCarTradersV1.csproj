@@ -47,6 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABCCarTradersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABCCarTradersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABCCarTradersDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABCCarTradersDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlCarDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlCarDetails.Designer.cs">
+      <DependentUpon>CtrlCarDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlCarPartsDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlCarPartsDetails.Designer.cs">
+      <DependentUpon>CtrlCarPartsDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtrlAdminDash.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,6 +108,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CtrlCarDetails.resx">
+      <DependentUpon>CtrlCarDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlCarPartsDetails.resx">
+      <DependentUpon>CtrlCarPartsDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrlAdminDash.resx">
       <DependentUpon>CtrlAdminDash.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +138,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ABCCarTradersDataSet.xsc">
+      <DependentUpon>ABCCarTradersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ABCCarTradersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABCCarTradersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABCCarTradersDataSet.xss">
+      <DependentUpon>ABCCarTradersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ABCCarTradersDataSet1.xsc">
+      <DependentUpon>ABCCarTradersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ABCCarTradersDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABCCarTradersDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABCCarTradersDataSet1.xss">
+      <DependentUpon>ABCCarTradersDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
