@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelCustomer));
@@ -45,27 +44,15 @@
             this.btnUserAcc = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCusUname = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cusHome1 = new abcCarTradersV1.CtrlCusHome();
-            label4 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Cursor = System.Windows.Forms.Cursors.Default;
-            label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.ForeColor = System.Drawing.Color.DarkGray;
-            label4.Location = new System.Drawing.Point(422, 18);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(51, 21);
-            label4.TabIndex = 6;
-            label4.Text = "Arjun";
             // 
             // label3
             // 
@@ -219,6 +206,7 @@
             this.btnLogout.Text = "          Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnClose
             // 
@@ -232,6 +220,7 @@
             this.btnClose.Size = new System.Drawing.Size(32, 32);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnUserAcc
             // 
@@ -259,9 +248,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.txtCusUname);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(label4);
             this.panel1.Controls.Add(this.btnUserAcc);
             this.panel1.Controls.Add(label3);
             this.panel1.Controls.Add(this.panel3);
@@ -272,6 +261,17 @@
             this.panel1.Size = new System.Drawing.Size(1280, 58);
             this.panel1.TabIndex = 3;
             // 
+            // txtCusUname
+            // 
+            this.txtCusUname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.txtCusUname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCusUname.ForeColor = System.Drawing.Color.White;
+            this.txtCusUname.Location = new System.Drawing.Point(425, 16);
+            this.txtCusUname.Name = "txtCusUname";
+            this.txtCusUname.ReadOnly = true;
+            this.txtCusUname.Size = new System.Drawing.Size(105, 27);
+            this.txtCusUname.TabIndex = 9;
+            // 
             // cusHome1
             // 
             this.cusHome1.BackColor = System.Drawing.Color.Goldenrod;
@@ -280,7 +280,7 @@
             this.cusHome1.Size = new System.Drawing.Size(978, 629);
             this.cusHome1.TabIndex = 6;
             // 
-            // FormCusPanel
+            // PanelCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -291,9 +291,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormCusPanel";
+            this.Name = "PanelCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.PanelCustomer_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -321,5 +322,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button1;
         private CtrlCusHome cusHome1;
+        private System.Windows.Forms.TextBox txtCusUname;
     }
 }

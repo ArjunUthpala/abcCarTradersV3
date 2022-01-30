@@ -30,9 +30,9 @@
         {
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
-            System.Windows.Forms.Label label4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtAdminUname = new System.Windows.Forms.TextBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnUserAcc = new System.Windows.Forms.Button();
@@ -54,7 +54,6 @@
             this.ctrlOrderDetails1 = new abcCarTradersV1.CtrlOrderDetails();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -84,24 +83,12 @@
             label3.TabIndex = 3;
             label3.Text = "Admin : ";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Cursor = System.Windows.Forms.Cursors.Default;
-            label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.ForeColor = System.Drawing.Color.DarkGray;
-            label4.Location = new System.Drawing.Point(398, 19);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(51, 21);
-            label4.TabIndex = 6;
-            label4.Text = "Arjun";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.txtAdminUname);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(label4);
             this.panel1.Controls.Add(this.btnUserAcc);
             this.panel1.Controls.Add(label3);
             this.panel1.Controls.Add(this.panel3);
@@ -111,6 +98,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 58);
             this.panel1.TabIndex = 0;
+            // 
+            // txtAdminUname
+            // 
+            this.txtAdminUname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.txtAdminUname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdminUname.ForeColor = System.Drawing.Color.White;
+            this.txtAdminUname.Location = new System.Drawing.Point(408, 16);
+            this.txtAdminUname.Name = "txtAdminUname";
+            this.txtAdminUname.ReadOnly = true;
+            this.txtAdminUname.Size = new System.Drawing.Size(105, 27);
+            this.txtAdminUname.TabIndex = 8;
             // 
             // btnLogout
             // 
@@ -128,6 +126,7 @@
             this.btnLogout.Text = "          Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnClose
             // 
@@ -346,7 +345,7 @@
             // 
             this.ctrlOrderDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.ctrlOrderDetails1.Location = new System.Drawing.Point(289, 76);
-            this.ctrlOrderDetails1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctrlOrderDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlOrderDetails1.Name = "ctrlOrderDetails1";
             this.ctrlOrderDetails1.Size = new System.Drawing.Size(977, 626);
             this.ctrlOrderDetails1.TabIndex = 8;
@@ -402,13 +401,14 @@
    
       //  private CtrlOrderDetails orderDetails1;
       //  private CtrlAdminDash ctrlAdminDash1;
-        private CtrlOrderDetails ctrlOrderDetails;
+   
    
         private CtrlCarDetails ctrlCarDetails;
         private CtrlAdminDash ctrlAdminDash2;
         private CtrlReports ctrlReports1;
         private CtrlCarPartsDetails ctrlCarPartsDetails1;
         private CtrlOrderDetails ctrlOrderDetails1;
+        private System.Windows.Forms.TextBox txtAdminUname;
     }
 }
 

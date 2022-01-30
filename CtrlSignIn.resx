@@ -117,22 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tblcarbrandsBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
-  </metadata>
-  <metadata name="aBCCarTradersDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>222, 95</value>
-  </metadata>
-  <metadata name="tbl_car_brandsTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>402, 95</value>
-  </metadata>
-  <metadata name="tblcarbrandsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>612, 95</value>
-  </metadata>
-  <metadata name="aBCCarTradersDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>810, 95</value>
-  </metadata>
-  <metadata name="tbl_car_brandsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>984, 95</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnLogin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAgdJREFUWEft
+        lr1LW1EYhxMnO3TQKYmUolAU/5BOFRSnunRNUVsjdBIKLXTpoC4iOrhU0AbapQb8E/wLtEsnx+IHOlj8
+        6Onz5v5uuSU53o/cIkgeeIb8znvenCQ355xCly5pcM6V8BU28Ace40/cx118iSWV54c1xQ38hXFc4ioO
+        aHpn0GgSj9Cw5p9wAsvYJ4fQ6jYxXOQ5jqtNNmhQxRvrBl/xsYa8UDOIX2wC2NzXGkoHE8fwt5xXnBjm
+        1PAabRHPFCeDCRU8QaOmODXMfRO0cKdYVhwPxfbAGVuKMsH8In5rdnJuXfHtUGif3r42e5gqiltgrB+n
+        9dILNU/QHl77OR4p9kPRLBqfFbXAWA/uNauc+6DYCzX1oDR+wYmh2VO8aLZ1bklxWxifCspcQ1E+0DC6
+        iEXFLTA2HJS474r8qDAr79TmH8gfBsPuTJEfFWZlGYtq9Rey5AtIAw3tt7Wn23ivuAXGRoISd6Coc2gW
+        ffO2X30I4+FDuKPID0VzQa1/E2Is+jf8qNgLNeHfsKrID0V29F6hbR7ew4cx24hm9NILNeFGZCbbjilc
+        Q6OuKBPMj27FK4rjodjO+jwOo7dBi+ZhlO6mxIROj+MFzU1/HIcw8e4uJCE0aHcle462vfbiAxzFF7iN
+        +V3JQmh0d5fSKDSNXssP0d7MFmVX9P93Le9yjykU/gB1MqBYjXBxLQAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

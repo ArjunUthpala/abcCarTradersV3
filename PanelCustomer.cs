@@ -16,5 +16,25 @@ namespace abcCarTradersV1
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            this.Hide();
+            frm.ShowDialog();
+        }
+
+        private void PanelCustomer_Load(object sender, EventArgs e)
+        {
+            if (!UserStatic.isAdmin)
+            {
+                txtCusUname.Text = Convert.ToString(UserStatic.Username);
+            }
+        }
     }
 }

@@ -20,11 +20,6 @@ namespace abcCarTradersV1
             ctrlAdminDash2.BringToFront();
         }
 
-      
-
-
-       
-
         private void btnDash_Click(object sender, EventArgs e)
         {
             CurrentTabIndicator.Height = btnDash.Height;
@@ -61,7 +56,10 @@ namespace abcCarTradersV1
 
         private void AdminPanel_Load(object sender, EventArgs e)
         {
-
+            if(UserStatic.isAdmin)
+            {
+                txtAdminUname.Text = Convert.ToString(UserStatic.Username);
+            }
         }
 
         private void btnReports_Click(object sender, EventArgs e)
@@ -69,6 +67,13 @@ namespace abcCarTradersV1
             CurrentTabIndicator.Height = btnReports.Height;
             CurrentTabIndicator.Top = btnReports.Top;
             ctrlReports1.BringToFront();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            this.Hide();
+            frm.ShowDialog();
         }
     }
 }
