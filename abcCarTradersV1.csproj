@@ -75,18 +75,23 @@
     <Compile Include="CtrlAdminDash.Designer.cs">
       <DependentUpon>CtrlAdminDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="connection\CarBrand.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="connection\CarBrand.Designer.cs">
-      <DependentUpon>CarBrand.cs</DependentUpon>
-    </Compile>
-    <Compile Include="connection\connection.cs" />
     <Compile Include="CtrlCusHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CtrlCusHome.Designer.cs">
       <DependentUpon>CtrlCusHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlSignIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlSignIn.Designer.cs">
+      <DependentUpon>CtrlSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelAdmin.cs">
       <SubType>Form</SubType>
@@ -114,6 +119,7 @@
     <Compile Include="CtrlReports.Designer.cs">
       <DependentUpon>CtrlReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserStatic.cs" />
     <EmbeddedResource Include="CtrlCarDetails.resx">
       <DependentUpon>CtrlCarDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlCusHome.resx">
       <DependentUpon>CtrlCusHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlSignIn.resx">
+      <DependentUpon>CtrlSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAdmin.resx">
       <DependentUpon>PanelAdmin.cs</DependentUpon>

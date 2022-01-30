@@ -62,13 +62,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCarModel = new System.Windows.Forms.TextBox();
             this.comboBoxCondition = new System.Windows.Forms.ComboBox();
             this.txtItemCode = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCarDetails = new System.Windows.Forms.DataGridView();
+            this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource1)).BeginInit();
@@ -293,6 +293,7 @@
             this.comboBoxCarBrand.Size = new System.Drawing.Size(124, 29);
             this.comboBoxCarBrand.TabIndex = 42;
             this.comboBoxCarBrand.ValueMember = "CarBrand_ID";
+            this.comboBoxCarBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxCarBrand_SelectedIndexChanged_1);
             // 
             // tblcarbrandsBindingSource1
             // 
@@ -430,15 +431,6 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Car Brand";
             // 
-            // txtCarModel
-            // 
-            this.txtCarModel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarModel.Location = new System.Drawing.Point(187, 112);
-            this.txtCarModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCarModel.Name = "txtCarModel";
-            this.txtCarModel.Size = new System.Drawing.Size(124, 27);
-            this.txtCarModel.TabIndex = 60;
-            // 
             // comboBoxCondition
             // 
             this.comboBoxCondition.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -513,18 +505,32 @@
             this.dataGridViewCarDetails.TabIndex = 66;
             this.dataGridViewCarDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCarDetails_CellClick_1);
             // 
+            // comboBoxCarModel
+            // 
+            this.comboBoxCarModel.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblcarbrandsBindingSource1, "CarBrand", true));
+            this.comboBoxCarModel.DataSource = this.tblcarbrandsBindingSource1;
+            this.comboBoxCarModel.DisplayMember = "CarBrand";
+            this.comboBoxCarModel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCarModel.FormattingEnabled = true;
+            this.comboBoxCarModel.Location = new System.Drawing.Point(187, 111);
+            this.comboBoxCarModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxCarModel.Name = "comboBoxCarModel";
+            this.comboBoxCarModel.Size = new System.Drawing.Size(124, 29);
+            this.comboBoxCarModel.TabIndex = 67;
+            this.comboBoxCarModel.ValueMember = "CarBrand_ID";
+            // 
             // CtrlCarDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.comboBoxCarModel);
             this.Controls.Add(this.dataGridViewCarDetails);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBoxCondition);
             this.Controls.Add(this.txtItemCode);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtCarModel);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
@@ -598,12 +604,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCarModel;
         private System.Windows.Forms.ComboBox comboBoxCondition;
         private System.Windows.Forms.TextBox txtItemCode;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewCarDetails;
+        private System.Windows.Forms.ComboBox comboBoxCarModel;
     }
 }
