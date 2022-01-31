@@ -19,7 +19,7 @@ namespace abcCarTradersV1
     {
         int Car_id;
         string item_code;
-        CarDetailsDTO CarDetailsDTO = new CarDetailsDTO();
+        CarDetailsDTO carDetailsDTO = new CarDetailsDTO();
         public CtrlCarDetails()
         {
             InitializeComponent();
@@ -30,23 +30,23 @@ namespace abcCarTradersV1
             DisplayDataonLoad();
             dataGridViewCarDetails.Columns[0].Visible = false;
 
-            CarDetailsDTO = CarDetailsBLL.GetAll();
+            carDetailsDTO = CarDetailsBLL.GetAll();
 
             //load Car brands to combo box
             //  List<tbl_car_brand> CarBrands = new List<tbl_car_brand>();
             //  CarBrands = CarBrandsBLL.GetCarBrands();
-            comboBoxCarBrand.DataSource = CarDetailsDTO.tblCarBrands;
+            comboBoxCarBrand.DataSource = carDetailsDTO.CarBrands;
             comboBoxCarBrand.DisplayMember = "CarBrand";
             comboBoxCarBrand.ValueMember = "CarBrand_ID";
             comboBoxCarBrand.SelectedIndex = -1;
 
           //  List<tbl_car_model> CarModels = new List<tbl_car_model>();
           //  CarModels = CarModelBLL.GetCarModels();
-            comboBoxCarModel.DataSource = CarDetailsDTO.CarModels;
+            comboBoxCarModel.DataSource = carDetailsDTO.CarModels;
             comboBoxCarModel.DisplayMember = "CarModel";
             comboBoxCarModel.ValueMember = "CarModel_ID";
             comboBoxCarModel.SelectedIndex = -1;
-            combofull = true;
+           
         }
 
         void DisplayDataonLoad()
@@ -56,15 +56,17 @@ namespace abcCarTradersV1
             CarDetails = CarDetailsBLL.GetCarDetails();
             dataGridViewCarDetails.DataSource = CarDetails;
             dataGridViewCarDetails.AutoGenerateColumns = false;
-
+            dataGridViewCarDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
+            dataGridViewCarDetails.ColumnHeadersDefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
+            this.dataGridViewCarDetails.Columns["tbl_inventory"].Visible = false;
         }
 
         private void dataGridViewCarDetails_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             //assiging values from data grid to the relavant input fields
             Car_id = Convert.ToInt32(dataGridViewCarDetails.Rows[e.RowIndex].Cells[0].Value.ToString());
-            comboBoxCarBrand.Text = dataGridViewCarDetails.Rows[e.RowIndex].Cells[1].Value.ToString();
-            comboBoxCarModel.Text = dataGridViewCarDetails.Rows[e.RowIndex].Cells[2].Value.ToString();
+            comboBoxCarBrand.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[1].Value.ToString());
+            comboBoxCarModel.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
             dateTimePickerYOM.Value = Convert.ToDateTime(dataGridViewCarDetails.Rows[e.RowIndex].Cells[3].Value.ToString());
             comboBoxCondition.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[4].Value.ToString());
             comboBoxFuelType.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[5].Value.ToString());
@@ -148,15 +150,11 @@ namespace abcCarTradersV1
                 item = InventoryBLL.MatchItem(item_code);
                 InventoryBLL.DeleteItem(item);
 
-             
-
-                MessageBox.Show("Delete Success!", "Deleted", MessageBoxButtons.OK);
 
                 DisplayDataonLoad();
                 Clear();
+                MessageBox.Show("Delete Success!", "Deleted", MessageBoxButtons.OK);
             }
-
-         
         }
 
         void Clear()
@@ -181,18 +179,19 @@ namespace abcCarTradersV1
       
 
 
-        bool combofull = false;
+     
         private void comboBoxCarBrand_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (combofull)
+            if (comboBoxCarBrand.SelectedIndex != -1)
             {
-                comboBoxCarModel.DataSource = CarDetailsDTO.CarModels.Where(x => x.CarBrand_ID ==
+                comboBoxCarModel.DataSource = carDetailsDTO.CarModels.Where(x => x.CarBrand_ID ==
                 Convert.ToInt32(comboBoxCarBrand.SelectedValue)).ToList();
-             // Convert.ToInt32(cmbDepartment.SelectedValue)).ToList();
+                // Convert.ToInt32(cmbDepartment.SelectedValue)).ToList();
                 //int carbrand_id = Convert.ToInt32(comboBoxCarBrand.ValueMember);
                 // comboBoxCarModel.DataSource = CarDetailsDTO.CarModels.Where(x => x.CarBrand_ID== carbrand_id).ToList();
 
             }
+           
         }
     }
 }

@@ -41,6 +41,7 @@
             this.btnRegisterPanel = new System.Windows.Forms.Button();
             this.panelIndicator2 = new System.Windows.Forms.Panel();
             this.ctrlSignIn1 = new abcCarTradersV1.CtrlSignIn();
+            this.ctrlRegister1 = new abcCarTradersV1.CtrlRegister();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -181,12 +182,21 @@
             this.ctrlSignIn1.Size = new System.Drawing.Size(720, 550);
             this.ctrlSignIn1.TabIndex = 12;
             // 
+            // ctrlRegister1
+            // 
+            this.ctrlRegister1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ctrlRegister1.Location = new System.Drawing.Point(530, 115);
+            this.ctrlRegister1.Name = "ctrlRegister1";
+            this.ctrlRegister1.Size = new System.Drawing.Size(720, 550);
+            this.ctrlRegister1.TabIndex = 13;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.ctrlRegister1);
             this.Controls.Add(this.ctrlSignIn1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -217,5 +227,6 @@
         private System.Windows.Forms.Panel PanelIndicator;
         private System.Windows.Forms.Panel panelIndicator2;
         private CtrlSignIn ctrlSignIn1;
+        private CtrlRegister ctrlRegister1;
     }
 }

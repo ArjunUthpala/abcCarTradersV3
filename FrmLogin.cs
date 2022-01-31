@@ -18,7 +18,7 @@ namespace abcCarTradersV1
             PanelIndicator.Width = btnLoginPanel.Width;
             PanelIndicator.Top = btnLoginPanel.Bottom;
             panelIndicator2.Top = btnRegisterPanel.Top;
-            // ctrlAdminDash2.BringToFront();
+            ctrlSignIn1.BringToFront();
         }
 
         private void btnRegisterPanel_Click(object sender, EventArgs e)
@@ -26,7 +26,8 @@ namespace abcCarTradersV1
             PanelIndicator.Width = btnRegisterPanel.Width;
             PanelIndicator.Top = btnRegisterPanel.Top;
             panelIndicator2.Top = btnRegisterPanel.Bottom;
-            // ctrlAdminDash2.BringToFront();
+            ctrlRegister1.BringToFront();
+         
         }
 
         private void btnLoginPanel_Click(object sender, EventArgs e)
@@ -34,7 +35,7 @@ namespace abcCarTradersV1
             PanelIndicator.Width = btnLoginPanel.Width;
             PanelIndicator.Top = btnLoginPanel.Bottom;
             panelIndicator2.Top = btnRegisterPanel.Top;
-            // ctrlAdminDash2.BringToFront();
+            ctrlSignIn1.BringToFront();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

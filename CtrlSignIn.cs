@@ -73,5 +73,10 @@ namespace abcCarTradersV1
                 }
             }
         }
+
+        private void CtrlSignIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

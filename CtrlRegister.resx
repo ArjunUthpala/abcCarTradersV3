@@ -117,28 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tblcarbrandsBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="aBCCarTradersDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>222, 95</value>
-  </metadata>
-  <metadata name="aBCCarTradersDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>222, 95</value>
-  </metadata>
-  <metadata name="tbl_car_brandsTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>402, 95</value>
-  </metadata>
-  <metadata name="tblcarbrandsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>612, 95</value>
-  </metadata>
-  <metadata name="aBCCarTradersDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>810, 95</value>
-  </metadata>
-  <metadata name="aBCCarTradersDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>810, 95</value>
-  </metadata>
-  <metadata name="tbl_car_brandsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>984, 95</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRegisterPanel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAl9JREFUWEft
+        lk2PTEEYhTvCkPhIxIz/YAYZQiIWExt/AImP1WxsSMQCK0HsjRDxkfkDFkQiLPgJNpMYLGxsWIgFM4hv
+        5TlV585o91b39O0rk4gnOUnXec996/at21Xd+k83Qgjr0Vn0CL229PkMGnLs78AEB9FHlOM92u94s9B4
+        H/qpWeA2GkNrLX2WJ5TZ48uagYZDaEbd4bTtEtROpkh4i9bZ7h+anY9t+Za2spC5l6LhnK3+odnj1DOM
+        2cpCZleKhilb/UOzD6lnWGkrC5nVKRpmbfUPzRb9BhZ9CYqX8K6tLGTup2izL+EgehfbhnDCdglqp1Ik
+        ZgdtNwMNf9+IbiFtPiusPzeivb6sWWg8HqfozLizG9EEeoLeWNP2RmLDXuAiPYEXqBsv0R30I46q+Y4u
+        o2Vun4fQUnQJFehbHEcjSO+GzoJhdBRNoW9IfEHX0DZUnBnb0XX0FYkHaMBTVUPgSoymhkfQEpdKUJtU
+        EPQUttguQW0reqUgXLVdhuKhlImT77ZdCfVNSI/9E9psO8I44mGE4Sj6jLQcw7bnwVyOijU/bDsLmWKZ
+        JmzNYb/tBgRW9hoVD6Ra3AWzj72AzLOYZp1tzWG/6gZ2pEqYtjUP5s1UC8dsdYTcbIqHVR53xJk1aRRm
+        NG4D83mqhQ22OkKuOLDq3ED54MLU/zsRG3aDXJ0l2JkqFUvQKzTp5yW8YKs+NGn2Z1gHGt1AQhvRqO0S
+        1Ba2EfUKzQbQw9i2fSvWniIVW7FqovtW3CtqiLR969HmWPhhVBea6zi+iJ4ivReSjmYdx82s+T9Iq/UL
+        Nw+GUJZkec8AAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
