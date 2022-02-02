@@ -18,6 +18,7 @@ namespace abcCarTradersV1
     public partial class CtrlCustomerCarOrder : UserControl
     {
         int Car_id;
+        string Cus_id;
         string item_code;
         string customer_NIC = Convert.ToString(UserStatic.NICNum);
         public CtrlCustomerCarOrder()
@@ -43,12 +44,15 @@ namespace abcCarTradersV1
             this.dataGridViewCarDetails.Columns["Car_ID"].Visible = false;
 
             //create data grid view for Car Order Details
-            // tbl_customer cus =new tbl_customer();
-            //  cus = CustomerBLL.GetCustomer(customer_NIC);
-               List<tbl_cus_order> OrderDetails = new List<tbl_cus_order>();
-         OrderDetails = CustomerCarOrderBLL.GetOrderDetails(customer_NIC);
-          //  tbl_cus_order OrderDetails = new tbl_cus_order();
-           // OrderDetails = CustomerCarOrderBLL.GetOneCustomerOrderlist(customer_NIC);
+         //    tbl_customer cus =new tbl_customer();
+         //    cus = CustomerBLL.GetCustomer(customer_NIC);
+  
+            //    OrderDetails = CustomerCarOrderBLL.GetOrderDetails();
+           //   tbl_cus_order CustomerOrder = new tbl_cus_order();
+          
+            List<tbl_cus_order> OrderDetails = new List<tbl_cus_order>();
+          //  OrderDetails = CustomerCarOrderBLL.GetOneCustomerOrderlist(customer_NIC);
+               OrderDetails = CustomerCarOrderBLL.GetOrderDetails(customer_NIC);
             dataGridViewOrderDetails.DataSource = OrderDetails;
             dataGridViewOrderDetails.AutoGenerateColumns = false;
             dataGridViewOrderDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
