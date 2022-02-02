@@ -47,6 +47,7 @@
             this.txtCusUname = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cusHome1 = new abcCarTradersV1.CtrlCusHome();
+            this.ctrlCustomerCarOrder1 = new abcCarTradersV1.CtrlCustomerCarOrder();
             label3 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -280,12 +281,23 @@
             this.cusHome1.Size = new System.Drawing.Size(978, 629);
             this.cusHome1.TabIndex = 6;
             // 
+            // ctrlCustomerCarOrder1
+            // 
+            this.ctrlCustomerCarOrder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlCustomerCarOrder1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCustomerCarOrder1.Location = new System.Drawing.Point(288, 77);
+            this.ctrlCustomerCarOrder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlCustomerCarOrder1.Name = "ctrlCustomerCarOrder1";
+            this.ctrlCustomerCarOrder1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlCustomerCarOrder1.TabIndex = 7;
+            // 
             // PanelCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.ctrlCustomerCarOrder1);
             this.Controls.Add(this.cusHome1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
@@ -323,5 +335,6 @@
         private System.Windows.Forms.Button button1;
         private CtrlCusHome cusHome1;
         private System.Windows.Forms.TextBox txtCusUname;
+        private CtrlCustomerCarOrder ctrlCustomerCarOrder1;
     }
 }

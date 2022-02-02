@@ -28,7 +28,7 @@ namespace abcCarTradersV1
         private void CtrlCarDetails1_Load(object sender, EventArgs e)
         {
             DisplayDataonLoad();
-            dataGridViewCarDetails.Columns[0].Visible = false;
+          
 
             carDetailsDTO = CarDetailsBLL.GetAll();
 
@@ -58,6 +58,7 @@ namespace abcCarTradersV1
             dataGridViewCarDetails.AutoGenerateColumns = false;
             dataGridViewCarDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
             dataGridViewCarDetails.ColumnHeadersDefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
+            dataGridViewCarDetails.Columns[0].Visible = false;
             this.dataGridViewCarDetails.Columns["tbl_inventory"].Visible = false;
         }
 
@@ -85,6 +86,7 @@ namespace abcCarTradersV1
             txtPrice.Text = Convert.ToString(item.Price);
             dateTimePickerDateAdded.Value = Convert.ToDateTime(item.DateAdded);
         }
+
         private void btnInsert_Click(object sender, EventArgs e)
         {
             tbl_inventory item = new tbl_inventory();
