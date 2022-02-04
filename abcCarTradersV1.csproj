@@ -75,17 +75,29 @@
     <Compile Include="CtrlAdminDash.Designer.cs">
       <DependentUpon>CtrlAdminDash.cs</DependentUpon>
     </Compile>
+    <Compile Include="CtrlCusCarPartOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlCusCarPartOrder.Designer.cs">
+      <DependentUpon>CtrlCusCarPartOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtrlCusHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CtrlCusHome.Designer.cs">
       <DependentUpon>CtrlCusHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="CtrlCustomerCarOrder.cs">
+    <Compile Include="CtrlCusCarOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CtrlCustomerCarOrder.Designer.cs">
-      <DependentUpon>CtrlCustomerCarOrder.cs</DependentUpon>
+    <Compile Include="CtrlCusCarOrder.Designer.cs">
+      <DependentUpon>CtrlCusCarOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlCusOrderSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlCusOrderSummary.Designer.cs">
+      <DependentUpon>CtrlCusOrderSummary.cs</DependentUpon>
     </Compile>
     <Compile Include="CtrlRegister.cs">
       <SubType>UserControl</SubType>
@@ -141,11 +153,17 @@
     <EmbeddedResource Include="CtrlAdminDash.resx">
       <DependentUpon>CtrlAdminDash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CtrlCusCarPartOrder.resx">
+      <DependentUpon>CtrlCusCarPartOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrlCusHome.resx">
       <DependentUpon>CtrlCusHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CtrlCustomerCarOrder.resx">
-      <DependentUpon>CtrlCustomerCarOrder.cs</DependentUpon>
+    <EmbeddedResource Include="CtrlCusCarOrder.resx">
+      <DependentUpon>CtrlCusCarOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlCusOrderSummary.resx">
+      <DependentUpon>CtrlCusOrderSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlRegister.resx">
       <DependentUpon>CtrlRegister.cs</DependentUpon>

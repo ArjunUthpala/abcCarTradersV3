@@ -103,9 +103,11 @@
             this.txtContactNum.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactNum.Location = new System.Drawing.Point(213, 176);
             this.txtContactNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtContactNum.MaxLength = 10;
             this.txtContactNum.Name = "txtContactNum";
             this.txtContactNum.Size = new System.Drawing.Size(220, 27);
             this.txtContactNum.TabIndex = 78;
+            this.txtContactNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNum_KeyPress);
             // 
             // label2
             // 
@@ -173,6 +175,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(464, 27);
             this.txtAddress.TabIndex = 81;
+            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
             // 
             // groupBox1
             // 

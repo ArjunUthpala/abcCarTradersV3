@@ -83,5 +83,15 @@ namespace abcCarTradersV1
                 MessageBox.Show("Please enter matching passwords", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtContactNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

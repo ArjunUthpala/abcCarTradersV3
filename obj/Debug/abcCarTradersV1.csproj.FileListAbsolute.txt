@@ -19,7 +19,6 @@ C:\Users\ASUS\source\repos\abcCarTradersV1\obj\Debug\abcCarTradersV1.CusHome.res
 C:\Users\ASUS\source\repos\abcCarTradersV1\obj\Debug\abcCarTradersV1.OrderDetails.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\abcCarTradersV1.exe.config
 C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\abcCarTradersV1.exe
-C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\abcCarTradersV1.pdb
 C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\BLL.dll
 C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\DAL.dll
 C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\BLL.pdb
@@ -30,8 +29,10 @@ C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csprojAssem
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCarDetails.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCarPartsDetails.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlAdminDash.resources
+C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusCarPartOrder.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusHome.resources
-C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCustomerCarOrder.resources
+C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusCarOrder.resources
+C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusOrderSummary.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlRegister.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlSignIn.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.FrmLogin.resources
@@ -45,3 +46,4 @@ C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.Core
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.CopyComplete
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.exe
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.pdb
+C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\abcCarTradersV1.pdb

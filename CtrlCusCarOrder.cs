@@ -15,13 +15,12 @@ using System.IO;
 
 namespace abcCarTradersV1
 {
-    public partial class CtrlCustomerCarOrder : UserControl
+    public partial class CtrlCusCarOrder : UserControl
     {
         int Car_id;
-        string Cus_id;
         string item_code;
         string customer_NIC = Convert.ToString(UserStatic.NICNum);
-        public CtrlCustomerCarOrder()
+        public CtrlCusCarOrder()
         {
             InitializeComponent();
         }
