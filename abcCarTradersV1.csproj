@@ -81,6 +81,12 @@
     <Compile Include="CtrlCusCarPartOrder.Designer.cs">
       <DependentUpon>CtrlCusCarPartOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="CtrlCusDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlCusDetails.Designer.cs">
+      <DependentUpon>CtrlCusDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtrlCusHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlCusCarPartOrder.resx">
       <DependentUpon>CtrlCusCarPartOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlCusDetails.resx">
+      <DependentUpon>CtrlCusDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlCusHome.resx">
       <DependentUpon>CtrlCusHome.cs</DependentUpon>

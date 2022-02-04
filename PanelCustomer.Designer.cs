@@ -32,12 +32,12 @@
             System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PanelCustomer));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnCarDetails = new System.Windows.Forms.Button();
-            this.btnCarPartsDetails = new System.Windows.Forms.Button();
-            this.btnOrderDetails = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnOrderCar = new System.Windows.Forms.Button();
+            this.btnCarPartsOrder = new System.Windows.Forms.Button();
+            this.btnMyOrders = new System.Windows.Forms.Button();
+            this.CurrentTabIndicator = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCusHome = new System.Windows.Forms.Button();
             this.labelBrand = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -46,9 +46,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCusUname = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.cusHome1 = new abcCarTradersV1.CtrlCusHome();
-            this.ctrlCustomerCarOrder1 = new abcCarTradersV1.CtrlCusCarOrder();
             this.ctrlCusCarPartOrder1 = new abcCarTradersV1.CtrlCusCarPartOrder();
+            this.ctrlCusOrderSummary1 = new abcCarTradersV1.CtrlCusOrderSummary();
+            this.ctrlCusCarOrder1 = new abcCarTradersV1.CtrlCusCarOrder();
+            this.ctrlCusDetails1 = new abcCarTradersV1.CtrlCusDetails();
             label3 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -89,97 +90,101 @@
             this.panel5.Size = new System.Drawing.Size(0, 662);
             this.panel5.TabIndex = 5;
             // 
-            // btnCarDetails
+            // btnOrderCar
             // 
-            this.btnCarDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnCarDetails.FlatAppearance.BorderSize = 0;
-            this.btnCarDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarDetails.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarDetails.ForeColor = System.Drawing.Color.White;
-            this.btnCarDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnCarDetails.Image")));
-            this.btnCarDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarDetails.Location = new System.Drawing.Point(37, 76);
-            this.btnCarDetails.Name = "btnCarDetails";
-            this.btnCarDetails.Size = new System.Drawing.Size(238, 51);
-            this.btnCarDetails.TabIndex = 5;
-            this.btnCarDetails.Text = "        Car Details";
-            this.btnCarDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarDetails.UseVisualStyleBackColor = false;
+            this.btnOrderCar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnOrderCar.FlatAppearance.BorderSize = 0;
+            this.btnOrderCar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderCar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderCar.ForeColor = System.Drawing.Color.White;
+            this.btnOrderCar.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderCar.Image")));
+            this.btnOrderCar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrderCar.Location = new System.Drawing.Point(37, 76);
+            this.btnOrderCar.Name = "btnOrderCar";
+            this.btnOrderCar.Size = new System.Drawing.Size(238, 51);
+            this.btnOrderCar.TabIndex = 5;
+            this.btnOrderCar.Text = "        Order a Car";
+            this.btnOrderCar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrderCar.UseVisualStyleBackColor = false;
+            this.btnOrderCar.Click += new System.EventHandler(this.btnOrderCar_Click);
             // 
-            // btnCarPartsDetails
+            // btnCarPartsOrder
             // 
-            this.btnCarPartsDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnCarPartsDetails.FlatAppearance.BorderSize = 0;
-            this.btnCarPartsDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCarPartsDetails.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarPartsDetails.ForeColor = System.Drawing.Color.White;
-            this.btnCarPartsDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnCarPartsDetails.Image")));
-            this.btnCarPartsDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarPartsDetails.Location = new System.Drawing.Point(37, 133);
-            this.btnCarPartsDetails.Name = "btnCarPartsDetails";
-            this.btnCarPartsDetails.Size = new System.Drawing.Size(238, 51);
-            this.btnCarPartsDetails.TabIndex = 5;
-            this.btnCarPartsDetails.Text = "        Car Parts Details";
-            this.btnCarPartsDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarPartsDetails.UseVisualStyleBackColor = false;
+            this.btnCarPartsOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnCarPartsOrder.FlatAppearance.BorderSize = 0;
+            this.btnCarPartsOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarPartsOrder.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarPartsOrder.ForeColor = System.Drawing.Color.White;
+            this.btnCarPartsOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnCarPartsOrder.Image")));
+            this.btnCarPartsOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCarPartsOrder.Location = new System.Drawing.Point(37, 133);
+            this.btnCarPartsOrder.Name = "btnCarPartsOrder";
+            this.btnCarPartsOrder.Size = new System.Drawing.Size(238, 51);
+            this.btnCarPartsOrder.TabIndex = 5;
+            this.btnCarPartsOrder.Text = "        Order Car Parts";
+            this.btnCarPartsOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCarPartsOrder.UseVisualStyleBackColor = false;
+            this.btnCarPartsOrder.Click += new System.EventHandler(this.btnCarPartsOrder_Click);
             // 
-            // btnOrderDetails
+            // btnMyOrders
             // 
-            this.btnOrderDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnOrderDetails.FlatAppearance.BorderSize = 0;
-            this.btnOrderDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrderDetails.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderDetails.ForeColor = System.Drawing.Color.White;
-            this.btnOrderDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderDetails.Image")));
-            this.btnOrderDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrderDetails.Location = new System.Drawing.Point(37, 190);
-            this.btnOrderDetails.Name = "btnOrderDetails";
-            this.btnOrderDetails.Size = new System.Drawing.Size(238, 51);
-            this.btnOrderDetails.TabIndex = 4;
-            this.btnOrderDetails.Text = "        Order Details";
-            this.btnOrderDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrderDetails.UseVisualStyleBackColor = false;
+            this.btnMyOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnMyOrders.FlatAppearance.BorderSize = 0;
+            this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyOrders.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyOrders.ForeColor = System.Drawing.Color.White;
+            this.btnMyOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnMyOrders.Image")));
+            this.btnMyOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyOrders.Location = new System.Drawing.Point(37, 190);
+            this.btnMyOrders.Name = "btnMyOrders";
+            this.btnMyOrders.Size = new System.Drawing.Size(238, 51);
+            this.btnMyOrders.TabIndex = 4;
+            this.btnMyOrders.Text = "        My Orders";
+            this.btnMyOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyOrders.UseVisualStyleBackColor = false;
+            this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
             // 
-            // panel4
+            // CurrentTabIndicator
             // 
-            this.panel4.BackColor = System.Drawing.Color.SpringGreen;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(0, 21);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(17, 51);
-            this.panel4.TabIndex = 2;
+            this.CurrentTabIndicator.BackColor = System.Drawing.Color.SpringGreen;
+            this.CurrentTabIndicator.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CurrentTabIndicator.ForeColor = System.Drawing.Color.White;
+            this.CurrentTabIndicator.Location = new System.Drawing.Point(0, 21);
+            this.CurrentTabIndicator.Name = "CurrentTabIndicator";
+            this.CurrentTabIndicator.Size = new System.Drawing.Size(17, 51);
+            this.CurrentTabIndicator.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btnCarDetails);
-            this.panel2.Controls.Add(this.btnCarPartsDetails);
-            this.panel2.Controls.Add(this.btnOrderDetails);
-            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.btnCusHome);
+            this.panel2.Controls.Add(this.btnOrderCar);
+            this.panel2.Controls.Add(this.btnCarPartsOrder);
+            this.panel2.Controls.Add(this.btnMyOrders);
+            this.panel2.Controls.Add(this.CurrentTabIndicator);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 58);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(274, 662);
             this.panel2.TabIndex = 4;
             // 
-            // button1
+            // btnCusHome
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(37, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 51);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "        Home";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCusHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnCusHome.FlatAppearance.BorderSize = 0;
+            this.btnCusHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCusHome.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCusHome.ForeColor = System.Drawing.Color.White;
+            this.btnCusHome.Image = ((System.Drawing.Image)(resources.GetObject("btnCusHome.Image")));
+            this.btnCusHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCusHome.Location = new System.Drawing.Point(37, 21);
+            this.btnCusHome.Name = "btnCusHome";
+            this.btnCusHome.Size = new System.Drawing.Size(238, 51);
+            this.btnCusHome.TabIndex = 6;
+            this.btnCusHome.Text = "        Home";
+            this.btnCusHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCusHome.UseVisualStyleBackColor = false;
+            this.btnCusHome.Click += new System.EventHandler(this.btnCusHome_Click);
             // 
             // labelBrand
             // 
@@ -274,33 +279,45 @@
             this.txtCusUname.Size = new System.Drawing.Size(105, 27);
             this.txtCusUname.TabIndex = 9;
             // 
-            // cusHome1
-            // 
-            this.cusHome1.BackColor = System.Drawing.Color.Goldenrod;
-            this.cusHome1.Location = new System.Drawing.Point(288, 77);
-            this.cusHome1.Name = "cusHome1";
-            this.cusHome1.Size = new System.Drawing.Size(978, 629);
-            this.cusHome1.TabIndex = 6;
-            // 
-            // ctrlCustomerCarOrder1
-            // 
-            this.ctrlCustomerCarOrder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.ctrlCustomerCarOrder1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlCustomerCarOrder1.Location = new System.Drawing.Point(288, 77);
-            this.ctrlCustomerCarOrder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ctrlCustomerCarOrder1.Name = "ctrlCustomerCarOrder1";
-            this.ctrlCustomerCarOrder1.Size = new System.Drawing.Size(977, 626);
-            this.ctrlCustomerCarOrder1.TabIndex = 7;
-            // 
             // ctrlCusCarPartOrder1
             // 
             this.ctrlCusCarPartOrder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.ctrlCusCarPartOrder1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlCusCarPartOrder1.Location = new System.Drawing.Point(288, 77);
+            this.ctrlCusCarPartOrder1.Location = new System.Drawing.Point(288, 76);
             this.ctrlCusCarPartOrder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctrlCusCarPartOrder1.Name = "ctrlCusCarPartOrder1";
             this.ctrlCusCarPartOrder1.Size = new System.Drawing.Size(977, 626);
             this.ctrlCusCarPartOrder1.TabIndex = 8;
+            // 
+            // ctrlCusOrderSummary1
+            // 
+            this.ctrlCusOrderSummary1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlCusOrderSummary1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCusOrderSummary1.Location = new System.Drawing.Point(288, 76);
+            this.ctrlCusOrderSummary1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlCusOrderSummary1.Name = "ctrlCusOrderSummary1";
+            this.ctrlCusOrderSummary1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlCusOrderSummary1.TabIndex = 9;
+            // 
+            // ctrlCusCarOrder1
+            // 
+            this.ctrlCusCarOrder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlCusCarOrder1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCusCarOrder1.Location = new System.Drawing.Point(288, 76);
+            this.ctrlCusCarOrder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlCusCarOrder1.Name = "ctrlCusCarOrder1";
+            this.ctrlCusCarOrder1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlCusCarOrder1.TabIndex = 10;
+            // 
+            // ctrlCusDetails1
+            // 
+            this.ctrlCusDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlCusDetails1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCusDetails1.Location = new System.Drawing.Point(288, 76);
+            this.ctrlCusDetails1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlCusDetails1.Name = "ctrlCusDetails1";
+            this.ctrlCusDetails1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlCusDetails1.TabIndex = 11;
             // 
             // PanelCustomer
             // 
@@ -308,12 +325,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.ctrlCusDetails1);
+            this.Controls.Add(this.ctrlCusCarOrder1);
             this.Controls.Add(this.ctrlCusCarPartOrder1);
-            this.Controls.Add(this.ctrlCustomerCarOrder1);
-            this.Controls.Add(this.cusHome1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ctrlCusOrderSummary1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PanelCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -332,10 +350,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnCarDetails;
-        private System.Windows.Forms.Button btnCarPartsDetails;
-        private System.Windows.Forms.Button btnOrderDetails;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnOrderCar;
+        private System.Windows.Forms.Button btnCarPartsOrder;
+        private System.Windows.Forms.Button btnMyOrders;
+        private System.Windows.Forms.Panel CurrentTabIndicator;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelBrand;
         private System.Windows.Forms.Button btnLogout;
@@ -344,10 +362,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button button1;
-        private CtrlCusHome cusHome1;
+        private System.Windows.Forms.Button btnCusHome;
         private System.Windows.Forms.TextBox txtCusUname;
-        private CtrlCusCarOrder ctrlCustomerCarOrder1;
         private CtrlCusCarPartOrder ctrlCusCarPartOrder1;
+        private CtrlCusOrderSummary ctrlCusOrderSummary1;
+        private CtrlCusCarOrder ctrlCusCarOrder1;
+        private CtrlCusDetails ctrlCusDetails1;
     }
 }

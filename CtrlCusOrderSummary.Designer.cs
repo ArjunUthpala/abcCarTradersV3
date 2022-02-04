@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,6 +53,15 @@
             this.groupBox2.Size = new System.Drawing.Size(418, 85);
             this.groupBox2.TabIndex = 77;
             this.groupBox2.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(250, 33);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(136, 27);
+            this.textBox1.TabIndex = 69;
             // 
             // label14
             // 
@@ -132,18 +141,9 @@
             this.label1.Location = new System.Drawing.Point(19, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 28);
+            this.label1.Size = new System.Drawing.Size(149, 28);
             this.label1.TabIndex = 74;
-            this.label1.Text = "Your Order Details";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(250, 33);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 27);
-            this.textBox1.TabIndex = 69;
+            this.label1.Text = "Your Orders";
             // 
             // CtrlCusOrderSummary
             // 

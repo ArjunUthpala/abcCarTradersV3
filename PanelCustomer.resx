@@ -124,7 +124,7 @@
     <value>False</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnCarDetails.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnOrderCar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAaxJREFUWEft
         lb0uBFEYhlck1NuyJRI2JFyAqEjETVDQi44LEKWSgopC1g3QiKDgDsRPFq2C+Kkcz3fOuxMjM2N2N6ua
@@ -137,7 +137,7 @@
         b7bYtuvd/XpmAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnCarPartsDetails.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCarPartsOrder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAQ5JREFUSEvt
         liFOA2EQhddUkVRzBYKsbQjhBHgMogrBIRDlGNUcg5BwAwwHqKwpgmKmb3c+0WSSsrNlBMl+yRP/vHnz
@@ -147,7 +147,7 @@
         BL8MaiL4ZVATkffmKyUM//CN/EOaZg/DqifqLXOlawAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnOrderDetails.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnMyOrders.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAVJJREFUSEvt
         lktKA1EQRXuik+zBDWQBToIEh+IGdOROxIHiIoQsJQPdgiPxQ/CDjp0ZaG9VnffQJM+YpDED+0BB16nb
@@ -158,7 +158,7 @@
         KqPQeWQb5ZT1ZRTaVNnhb3bHiryqzlQbrG/5a6rqEwI3ue7dJK4WAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCusHome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAATRJREFUWEft
         kT9OAlEYxFexoIGEUkq9BJXehMgZ8AAeQgp7PYXewoLIESigwg7WmfW3RHnZ7Gb/GCH7SyZ5fDPfvAdE

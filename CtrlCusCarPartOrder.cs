@@ -58,7 +58,8 @@ namespace abcCarTradersV1
             txtQTY.Text = Convert.ToString(item.QTY);
             txtPrice.Text = Convert.ToString(item.Price);
         }
-
+       
+           
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
             int orderQTY = Convert.ToInt32(numericUpDown.Value);
@@ -66,5 +67,6 @@ namespace abcCarTradersV1
             int TotAmount = (orderQTY * unitPrice);
             txtTotalAmt.Text = Convert.ToString(TotAmount);
         }
+   
     }
 }
