@@ -19,6 +19,13 @@ namespace abcCarTradersV1
     {
         int Car_id;
         string item_code;
+        int orderQTY;
+        int availableQTY;
+        int unitPrice;
+        int TotAmount;
+        int remainingQTY;
+        string orderType = "Car";
+        string orderState = "Pending";
         string customer_NIC = Convert.ToString(UserStatic.NICNum);
         public CtrlCusCarOrder()
         {
@@ -32,7 +39,7 @@ namespace abcCarTradersV1
 
         void DisplayDataonLoad()
         {
-            //create data grid view for Car Details
+            //load data grid view for Car Details
             List<tbl_car> CarDetails = new List<tbl_car>();
             CarDetails = CarDetailsBLL.GetCarDetails();
             dataGridViewCarDetails.DataSource = CarDetails;
@@ -50,14 +57,17 @@ namespace abcCarTradersV1
            //   tbl_cus_order CustomerOrder = new tbl_cus_order();
           
             List<tbl_cus_order> OrderDetails = new List<tbl_cus_order>();
-          //  OrderDetails = CustomerCarOrderBLL.GetOneCustomerOrderlist(customer_NIC);
-               OrderDetails = CustomerCarOrderBLL.GetOrderDetails(customer_NIC);
+            //  OrderDetails = CustomerCarOrderBLL.GetOneCustomerOrderlist(customer_NIC);
+            // correct*      OrderDetails = CustomerCarOrderBLL.GetOrderDetails(customer_NIC);
+            OrderDetails = CusOrderBLL.GetOrderDetails(customer_NIC, orderType);
             dataGridViewOrderDetails.DataSource = OrderDetails;
             dataGridViewOrderDetails.AutoGenerateColumns = false;
             dataGridViewOrderDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
             dataGridViewOrderDetails.ColumnHeadersDefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
-           // this.dataGridViewCarDetails.Columns["tbl_inventory"].Visible = false;
-           // this.dataGridViewCarDetails.Columns["Car_ID"].Visible = false;
+            this.dataGridViewOrderDetails.Columns["tbl_user"].Visible = false;
+            this.dataGridViewOrderDetails.Columns["OrderType"].Visible = false;
+            // this.dataGridViewCarDetails.Columns["tbl_inventory"].Visible = false;
+            // this.dataGridViewCarDetails.Columns["Car_ID"].Visible = false;
         }
 
         private void dataGridViewCarDetails_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -81,11 +91,11 @@ namespace abcCarTradersV1
 
         void Clear()
         {
+            //clear textboxes when refreshing
             txtCarbrand.Clear();
             txtCarModel.Clear();
             txtYOM.Clear();
             txtItemCode.Clear();
-           
             txtTotalAmt.Clear();
 
             txtQTY.Clear();
@@ -94,14 +104,14 @@ namespace abcCarTradersV1
 
         }
 
-        string orderState = "Pending";
+       
    
         private void btnOder_Click(object sender, EventArgs e)
         {
             if (numericUpDown.Value != 0) { 
-                int availableQTY = Convert.ToInt32(txtQTY.Text);
-                int orderQTY = Convert.ToInt32(numericUpDown.Value);
-                decimal unitPrice = Convert.ToDecimal(txtPrice.Text);
+                availableQTY = Convert.ToInt32(txtQTY.Text);
+                orderQTY = Convert.ToInt32(numericUpDown.Value);
+ 
 
                 if (availableQTY>=orderQTY)
                 {
@@ -111,10 +121,11 @@ namespace abcCarTradersV1
                     order.TotalAmount = Convert.ToInt32(txtTotalAmt.Text);
                     order.OrderState = orderState;
                     order.ItemCode = txtItemCode.Text;
-                    order.OrderItemQty = Convert.ToInt32(numericUpDown.Value); 
-                    CustomerCarOrderBLL.OrderCar(order);
+                    order.OrderItemQty = Convert.ToInt32(numericUpDown.Value);
+                    order.OrderType = orderType;
+                    CusOrderBLL.OrderItem(order);
 
-                    int remainingQTY = availableQTY - orderQTY;
+                    remainingQTY = availableQTY - orderQTY;
                     tbl_inventory item = new tbl_inventory();
                     item = InventoryBLL.MatchItem(item_code);
                     item.QTY = remainingQTY;
@@ -139,10 +150,16 @@ namespace abcCarTradersV1
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            int orderQTY = Convert.ToInt32(numericUpDown.Value);
-            int unitPrice = Convert.ToInt32(txtPrice.Text);
-            int TotAmount = (orderQTY * unitPrice);
-            txtTotalAmt.Text = Convert.ToString(TotAmount);
+            if (txtPrice.Text.Trim() == "")
+                MessageBox.Show("Please Select a Car");
+            else
+            {
+                orderQTY = Convert.ToInt32(numericUpDown.Value);
+                unitPrice = Convert.ToInt32(txtPrice.Text);
+                TotAmount = (orderQTY * unitPrice);
+                txtTotalAmt.Text = Convert.ToString(TotAmount);
+            }
+               
         }
     }
 }

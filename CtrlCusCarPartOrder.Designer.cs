@@ -257,6 +257,7 @@
             this.btnOder.TabIndex = 112;
             this.btnOder.Text = "Place Order";
             this.btnOder.UseVisualStyleBackColor = false;
+            this.btnOder.Click += new System.EventHandler(this.btnOder_Click);
             // 
             // label1
             // 

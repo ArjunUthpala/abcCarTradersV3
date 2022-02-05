@@ -26,7 +26,6 @@ C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\BLL.pdb
 C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\BLL.dll.config
 C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\DAL.pdb
 C:\Users\ASUS\source\repos\abcCarTradersV3\bin\Debug\DAL.dll.config
-C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csprojAssemblyReference.cache
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCarDetails.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCarPartsDetails.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlAdminDash.resources
@@ -48,3 +47,4 @@ C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.Core
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.CopyComplete
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.exe
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.pdb
+C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.AssemblyReference.cache

@@ -19,6 +19,13 @@ namespace abcCarTradersV1
     {
         int Carpart_id;
         string item_code;
+        int orderQTY;
+        int availableQTY;
+        int unitPrice;
+        int TotAmount;
+        int remainingQTY;
+        string orderType = "Car Part";
+        string orderState = "Pending";
         string customer_NIC = Convert.ToString(UserStatic.NICNum);
         public CtrlCusCarPartOrder()
         {
@@ -32,6 +39,7 @@ namespace abcCarTradersV1
 
         void DisplayDataonLoad()
         {
+            //load data grid view for Car Parts Details
             List<tbl_car_part> CarPartDetails = new List<tbl_car_part>();
             CarPartDetails = CarPartsDetailsBLL.GetCarPartsDetails();
             dataGridViewCarPartsDetails.DataSource = CarPartDetails;
@@ -39,8 +47,17 @@ namespace abcCarTradersV1
             dataGridViewCarPartsDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
             dataGridViewCarPartsDetails.ColumnHeadersDefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
             this.dataGridViewCarPartsDetails.Columns["tbl_inventory"].Visible = false;
+            this.dataGridViewCarPartsDetails.Columns["Part_ID"].Visible = false;
 
-
+            //load data grid view for Car Parts Order Details
+            List<tbl_cus_order> OrderDetails = new List<tbl_cus_order>();
+            OrderDetails = CusOrderBLL.GetOrderDetails(customer_NIC, orderType);
+            dataGridViewOrderDetails.DataSource = OrderDetails;
+            dataGridViewOrderDetails.AutoGenerateColumns = false;
+            dataGridViewOrderDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
+            dataGridViewOrderDetails.ColumnHeadersDefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
+            this.dataGridViewOrderDetails.Columns["tbl_user"].Visible = false;
+            this.dataGridViewOrderDetails.Columns["OrderType"].Visible = false;
         }
 
         private void dataGridViewCarPartsDetails_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -58,15 +75,69 @@ namespace abcCarTradersV1
             txtQTY.Text = Convert.ToString(item.QTY);
             txtPrice.Text = Convert.ToString(item.Price);
         }
-       
-           
+
+        void Clear()
+        {
+            //clear textboxes when refreshing
+            txtPartName.Clear();
+            txtPartBrand.Clear();
+            txtCarModel.Clear();
+            txtItemCode.Clear();
+            txtTotalAmt.Clear();
+
+            txtQTY.Clear();
+            txtPrice.Clear();
+
+
+        }
+
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            int orderQTY = Convert.ToInt32(numericUpDown.Value);
-            int unitPrice = Convert.ToInt32(txtPrice.Text);
-            int TotAmount = (orderQTY * unitPrice);
+            orderQTY = Convert.ToInt32(numericUpDown.Value);
+            unitPrice = Convert.ToInt32(txtPrice.Text);
+            TotAmount = (orderQTY * unitPrice);
             txtTotalAmt.Text = Convert.ToString(TotAmount);
         }
-   
+
+        private void btnOder_Click(object sender, EventArgs e)
+        {
+            if (numericUpDown.Value != 0)
+            {
+                availableQTY = Convert.ToInt32(txtQTY.Text);
+                orderQTY = Convert.ToInt32(numericUpDown.Value);
+
+
+                if (availableQTY >= orderQTY)
+                {
+                    tbl_cus_order order = new tbl_cus_order();
+                    order.OrderDate = DateTime.Today;
+                    order.NICNum = customer_NIC;
+                    order.TotalAmount = Convert.ToInt32(txtTotalAmt.Text);
+                    order.OrderState = orderState;
+                    order.ItemCode = txtItemCode.Text;
+                    order.OrderItemQty = Convert.ToInt32(numericUpDown.Value);
+                    order.OrderType = orderType;
+                    CusOrderBLL.OrderItem(order);
+
+                    remainingQTY = availableQTY - orderQTY;
+                    tbl_inventory item = new tbl_inventory();
+                    item = InventoryBLL.MatchItem(item_code);
+                    item.QTY = remainingQTY;
+                    InventoryBLL.UpdateItem(item);
+                    numericUpDown.Value = 0;
+                }
+                else
+                {
+                    MessageBox.Show("Please Lower the Quantity", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                DisplayDataonLoad();
+                Clear();
+
+            }
+            else
+            {
+                MessageBox.Show("Please Select Quantity", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
