@@ -61,12 +61,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
             this.dataGridViewCarPartsDetails = new System.Windows.Forms.DataGridView();
+            this.btnBrowseImg = new System.Windows.Forms.Button();
+            this.txtImgPath = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBoxCarPart = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarPartsDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarPart)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -78,7 +84,7 @@
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.dateTimePickerDateAdded);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(657, 80);
+            this.groupBox1.Location = new System.Drawing.Point(657, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(306, 200);
             this.groupBox1.TabIndex = 93;
@@ -213,7 +219,7 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Coral;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(561, 317);
+            this.btnDelete.Location = new System.Drawing.Point(561, 280);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(93, 44);
             this.btnDelete.TabIndex = 87;
@@ -225,7 +231,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Coral;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(439, 317);
+            this.btnUpdate.Location = new System.Drawing.Point(439, 280);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(93, 44);
             this.btnUpdate.TabIndex = 86;
@@ -247,7 +253,7 @@
             // 
             this.btnInsert.BackColor = System.Drawing.Color.Coral;
             this.btnInsert.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.Location = new System.Drawing.Point(317, 317);
+            this.btnInsert.Location = new System.Drawing.Point(317, 280);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(93, 44);
             this.btnInsert.TabIndex = 85;
@@ -406,17 +412,68 @@
             // dataGridViewCarPartsDetails
             // 
             this.dataGridViewCarPartsDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCarPartsDetails.Location = new System.Drawing.Point(14, 383);
+            this.dataGridViewCarPartsDetails.Location = new System.Drawing.Point(317, 344);
             this.dataGridViewCarPartsDetails.Name = "dataGridViewCarPartsDetails";
-            this.dataGridViewCarPartsDetails.Size = new System.Drawing.Size(949, 295);
+            this.dataGridViewCarPartsDetails.Size = new System.Drawing.Size(646, 334);
             this.dataGridViewCarPartsDetails.TabIndex = 101;
             this.dataGridViewCarPartsDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCarPartsDetails_CellClick);
+            // 
+            // btnBrowseImg
+            // 
+            this.btnBrowseImg.BackColor = System.Drawing.Color.Coral;
+            this.btnBrowseImg.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowseImg.Location = new System.Drawing.Point(804, 219);
+            this.btnBrowseImg.Name = "btnBrowseImg";
+            this.btnBrowseImg.Size = new System.Drawing.Size(97, 32);
+            this.btnBrowseImg.TabIndex = 104;
+            this.btnBrowseImg.Text = "Browse";
+            this.btnBrowseImg.UseVisualStyleBackColor = false;
+            this.btnBrowseImg.Click += new System.EventHandler(this.btnBrowseImg_Click);
+            // 
+            // txtImgPath
+            // 
+            this.txtImgPath.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImgPath.Location = new System.Drawing.Point(503, 223);
+            this.txtImgPath.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtImgPath.Name = "txtImgPath";
+            this.txtImgPath.Size = new System.Drawing.Size(275, 27);
+            this.txtImgPath.TabIndex = 103;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(355, 224);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(118, 22);
+            this.label16.TabIndex = 102;
+            this.label16.Text = "Image Path";
+            // 
+            // pictureBoxCarPart
+            // 
+            this.pictureBoxCarPart.Location = new System.Drawing.Point(14, 396);
+            this.pictureBoxCarPart.Name = "pictureBoxCarPart";
+            this.pictureBoxCarPart.Size = new System.Drawing.Size(285, 282);
+            this.pictureBoxCarPart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCarPart.TabIndex = 105;
+            this.pictureBoxCarPart.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // CtrlCarPartsDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.pictureBoxCarPart);
+            this.Controls.Add(this.btnBrowseImg);
+            this.Controls.Add(this.txtImgPath);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.dataGridViewCarPartsDetails);
             this.Controls.Add(this.comboBoxCarModel);
             this.Controls.Add(this.comboBoxCarBrand);
@@ -449,6 +506,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarPartsDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarPart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,5 +545,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxCarModel;
         private System.Windows.Forms.DataGridView dataGridViewCarPartsDetails;
+        private System.Windows.Forms.Button btnBrowseImg;
+        private System.Windows.Forms.TextBox txtImgPath;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox pictureBoxCarPart;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
