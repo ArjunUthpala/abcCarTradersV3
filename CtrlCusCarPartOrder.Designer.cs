@@ -51,10 +51,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCarModel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBoxCarPart = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarPartsDetails)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarPart)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDown
@@ -137,9 +139,9 @@
             // dataGridViewOrderDetails
             // 
             this.dataGridViewOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrderDetails.Location = new System.Drawing.Point(563, 51);
+            this.dataGridViewOrderDetails.Location = new System.Drawing.Point(563, 61);
             this.dataGridViewOrderDetails.Name = "dataGridViewOrderDetails";
-            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(397, 232);
+            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(397, 240);
             this.dataGridViewOrderDetails.TabIndex = 117;
             // 
             // label3
@@ -160,7 +162,7 @@
             this.dataGridViewCarPartsDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCarPartsDetails.Location = new System.Drawing.Point(17, 319);
             this.dataGridViewCarPartsDetails.Name = "dataGridViewCarPartsDetails";
-            this.dataGridViewCarPartsDetails.Size = new System.Drawing.Size(943, 288);
+            this.dataGridViewCarPartsDetails.Size = new System.Drawing.Size(641, 288);
             this.dataGridViewCarPartsDetails.TabIndex = 116;
             this.dataGridViewCarPartsDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCarPartsDetails_CellClick);
             // 
@@ -321,11 +323,21 @@
             this.label6.TabIndex = 127;
             this.label6.Text = "Car Model";
             // 
+            // pictureBoxCarPart
+            // 
+            this.pictureBoxCarPart.Location = new System.Drawing.Point(675, 322);
+            this.pictureBoxCarPart.Name = "pictureBoxCarPart";
+            this.pictureBoxCarPart.Size = new System.Drawing.Size(285, 285);
+            this.pictureBoxCarPart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCarPart.TabIndex = 129;
+            this.pictureBoxCarPart.TabStop = false;
+            // 
             // CtrlCusCarPartOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.pictureBoxCarPart);
             this.Controls.Add(this.txtCarModel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.numericUpDown);
@@ -355,6 +367,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarPartsDetails)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarPart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,5 +397,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCarModel;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBoxCarPart;
     }
 }

@@ -29,18 +29,31 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewAllOrders = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtOrderID = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.comboBoxCondition = new System.Windows.Forms.ComboBox();
+            this.comboBoxOrderState = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnSetState = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTotalAmt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtItemCode = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtOrderDate = new System.Windows.Forms.TextBox();
+            this.txtOrderType = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllOrders)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,14 +69,14 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Car Order Details";
             // 
-            // dataGridView1
+            // dataGridViewAllOrders
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 66);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(946, 449);
-            this.dataGridView1.TabIndex = 24;
+            this.dataGridViewAllOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllOrders.Location = new System.Drawing.Point(14, 289);
+            this.dataGridViewAllOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewAllOrders.Name = "dataGridViewAllOrders";
+            this.dataGridViewAllOrders.Size = new System.Drawing.Size(946, 322);
+            this.dataGridViewAllOrders.TabIndex = 24;
             // 
             // label10
             // 
@@ -78,14 +91,14 @@
             this.label10.TabIndex = 66;
             this.label10.Text = "Order ID";
             // 
-            // txtUsername
+            // txtOrderID
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(120, 34);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(136, 27);
-            this.txtUsername.TabIndex = 67;
+            this.txtOrderID.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrderID.Location = new System.Drawing.Point(120, 34);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.Size = new System.Drawing.Size(136, 27);
+            this.txtOrderID.TabIndex = 67;
             // 
             // btnSearch
             // 
@@ -99,19 +112,19 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // comboBoxCondition
+            // comboBoxOrderState
             // 
-            this.comboBoxCondition.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCondition.FormattingEnabled = true;
-            this.comboBoxCondition.Items.AddRange(new object[] {
+            this.comboBoxOrderState.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxOrderState.FormattingEnabled = true;
+            this.comboBoxOrderState.Items.AddRange(new object[] {
             "Brand New",
             "Used",
             "Reconditioned"});
-            this.comboBoxCondition.Location = new System.Drawing.Point(183, 34);
-            this.comboBoxCondition.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.comboBoxCondition.Name = "comboBoxCondition";
-            this.comboBoxCondition.Size = new System.Drawing.Size(158, 28);
-            this.comboBoxCondition.TabIndex = 70;
+            this.comboBoxOrderState.Location = new System.Drawing.Point(183, 34);
+            this.comboBoxOrderState.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.comboBoxOrderState.Name = "comboBoxOrderState";
+            this.comboBoxOrderState.Size = new System.Drawing.Size(158, 28);
+            this.comboBoxOrderState.TabIndex = 70;
             // 
             // label14
             // 
@@ -142,8 +155,8 @@
             // 
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.txtUsername);
-            this.groupBox1.Location = new System.Drawing.Point(14, 525);
+            this.groupBox1.Controls.Add(this.txtOrderID);
+            this.groupBox1.Location = new System.Drawing.Point(23, 51);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -154,9 +167,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.comboBoxCondition);
+            this.groupBox2.Controls.Add(this.comboBoxOrderState);
             this.groupBox2.Controls.Add(this.btnSetState);
-            this.groupBox2.Location = new System.Drawing.Point(454, 525);
+            this.groupBox2.Location = new System.Drawing.Point(454, 51);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -164,24 +177,172 @@
             this.groupBox2.TabIndex = 73;
             this.groupBox2.TabStop = false;
             // 
+            // numericUpDown
+            // 
+            this.numericUpDown.Location = new System.Drawing.Point(680, 156);
+            this.numericUpDown.Name = "numericUpDown";
+            this.numericUpDown.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDown.TabIndex = 131;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(500, 198);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 22);
+            this.label2.TabIndex = 129;
+            this.label2.Text = "Total Amount";
+            // 
+            // txtTotalAmt
+            // 
+            this.txtTotalAmt.Enabled = false;
+            this.txtTotalAmt.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalAmt.Location = new System.Drawing.Point(680, 198);
+            this.txtTotalAmt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTotalAmt.Name = "txtTotalAmt";
+            this.txtTotalAmt.Size = new System.Drawing.Size(92, 27);
+            this.txtTotalAmt.TabIndex = 130;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(500, 155);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 22);
+            this.label3.TabIndex = 126;
+            this.label3.Text = "Order Quantity";
+            // 
+            // txtItemCode
+            // 
+            this.txtItemCode.Enabled = false;
+            this.txtItemCode.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemCode.Location = new System.Drawing.Point(327, 196);
+            this.txtItemCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtItemCode.Name = "txtItemCode";
+            this.txtItemCode.Size = new System.Drawing.Size(91, 27);
+            this.txtItemCode.TabIndex = 128;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(192, 197);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(108, 22);
+            this.label15.TabIndex = 127;
+            this.label15.Text = "Item Code";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(192, 155);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 22);
+            this.label4.TabIndex = 132;
+            this.label4.Text = "Order ID";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(327, 152);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(92, 27);
+            this.textBox1.TabIndex = 133;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(500, 243);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(140, 22);
+            this.label5.TabIndex = 136;
+            this.label5.Text = "Ordered Date";
+            // 
+            // txtOrderDate
+            // 
+            this.txtOrderDate.Enabled = false;
+            this.txtOrderDate.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrderDate.Location = new System.Drawing.Point(680, 243);
+            this.txtOrderDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOrderDate.Name = "txtOrderDate";
+            this.txtOrderDate.Size = new System.Drawing.Size(92, 27);
+            this.txtOrderDate.TabIndex = 137;
+            // 
+            // txtOrderType
+            // 
+            this.txtOrderType.Enabled = false;
+            this.txtOrderType.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrderType.Location = new System.Drawing.Point(327, 241);
+            this.txtOrderType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOrderType.Name = "txtOrderType";
+            this.txtOrderType.Size = new System.Drawing.Size(91, 27);
+            this.txtOrderType.TabIndex = 135;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(192, 242);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 22);
+            this.label6.TabIndex = 134;
+            this.label6.Text = "Order Type";
+            // 
             // CtrlOrderDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtOrderDate);
+            this.Controls.Add(this.txtOrderType);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.numericUpDown);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtTotalAmt);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtItemCode);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewAllOrders);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CtrlOrderDetails";
             this.Size = new System.Drawing.Size(977, 626);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.CtrlOrderDetails_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllOrders)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,14 +351,26 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewAllOrders;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ComboBox comboBoxCondition;
+        private System.Windows.Forms.ComboBox comboBoxOrderState;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnSetState;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.NumericUpDown numericUpDown;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTotalAmt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtItemCode;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtOrderDate;
+        private System.Windows.Forms.TextBox txtOrderType;
+        private System.Windows.Forms.Label label6;
     }
 }

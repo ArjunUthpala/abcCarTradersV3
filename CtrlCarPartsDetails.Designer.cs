@@ -454,9 +454,9 @@
             // 
             // pictureBoxCarPart
             // 
-            this.pictureBoxCarPart.Location = new System.Drawing.Point(14, 396);
+            this.pictureBoxCarPart.Location = new System.Drawing.Point(16, 392);
             this.pictureBoxCarPart.Name = "pictureBoxCarPart";
-            this.pictureBoxCarPart.Size = new System.Drawing.Size(285, 282);
+            this.pictureBoxCarPart.Size = new System.Drawing.Size(285, 285);
             this.pictureBoxCarPart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCarPart.TabIndex = 105;
             this.pictureBoxCarPart.TabStop = false;

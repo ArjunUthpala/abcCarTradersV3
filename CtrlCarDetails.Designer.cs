@@ -505,9 +505,9 @@
             // dataGridViewCarDetails
             // 
             this.dataGridViewCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCarDetails.Location = new System.Drawing.Point(310, 352);
+            this.dataGridViewCarDetails.Location = new System.Drawing.Point(289, 352);
             this.dataGridViewCarDetails.Name = "dataGridViewCarDetails";
-            this.dataGridViewCarDetails.Size = new System.Drawing.Size(653, 259);
+            this.dataGridViewCarDetails.Size = new System.Drawing.Size(674, 259);
             this.dataGridViewCarDetails.TabIndex = 66;
             this.dataGridViewCarDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCarDetails_CellClick_1);
             // 
@@ -529,7 +529,7 @@
             // 
             this.pictureBoxCar.Location = new System.Drawing.Point(14, 354);
             this.pictureBoxCar.Name = "pictureBoxCar";
-            this.pictureBoxCar.Size = new System.Drawing.Size(278, 256);
+            this.pictureBoxCar.Size = new System.Drawing.Size(256, 256);
             this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCar.TabIndex = 68;
             this.pictureBoxCar.TabStop = false;

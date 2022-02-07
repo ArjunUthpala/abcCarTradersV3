@@ -24,6 +24,7 @@ namespace abcCarTradersV1
         int unitPrice;
         int TotAmount;
         int remainingQTY;
+        string imgPath = "";
         string orderType = "Car Part";
         string orderState = "Pending";
         string customer_NIC = Convert.ToString(UserStatic.NICNum);
@@ -74,6 +75,11 @@ namespace abcCarTradersV1
             item = InventoryBLL.GetOneItem(item_code);
             txtQTY.Text = Convert.ToString(item.QTY);
             txtPrice.Text = Convert.ToString(item.Price);
+
+            tbl_car_part carpart = new tbl_car_part();
+            carpart = CarPartsDetailsBLL.MatchCarPart(Carpart_id);
+            imgPath = Application.StartupPath + "\\images\\" + carpart.ImagePath;
+            pictureBoxCarPart.ImageLocation = imgPath;
         }
 
         void Clear()
