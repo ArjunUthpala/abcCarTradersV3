@@ -69,12 +69,18 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewCarDetails = new System.Windows.Forms.DataGridView();
             this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
+            this.pictureBoxCar = new System.Windows.Forms.PictureBox();
+            this.txtImgPath = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.btnBrowseImg = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSet1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePickerDateAdded
@@ -448,10 +454,10 @@
             // txtItemCode
             // 
             this.txtItemCode.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemCode.Location = new System.Drawing.Point(503, 248);
+            this.txtItemCode.Location = new System.Drawing.Point(801, 204);
             this.txtItemCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtItemCode.Name = "txtItemCode";
-            this.txtItemCode.Size = new System.Drawing.Size(124, 27);
+            this.txtItemCode.Size = new System.Drawing.Size(97, 27);
             this.txtItemCode.TabIndex = 63;
             // 
             // label14
@@ -473,7 +479,7 @@
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(355, 249);
+            this.label15.Location = new System.Drawing.Point(653, 205);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(108, 22);
@@ -489,7 +495,7 @@
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.dateTimePickerDateAdded);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(657, 76);
+            this.groupBox1.Location = new System.Drawing.Point(657, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(306, 180);
             this.groupBox1.TabIndex = 65;
@@ -499,9 +505,9 @@
             // dataGridViewCarDetails
             // 
             this.dataGridViewCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCarDetails.Location = new System.Drawing.Point(14, 352);
+            this.dataGridViewCarDetails.Location = new System.Drawing.Point(310, 352);
             this.dataGridViewCarDetails.Name = "dataGridViewCarDetails";
-            this.dataGridViewCarDetails.Size = new System.Drawing.Size(949, 259);
+            this.dataGridViewCarDetails.Size = new System.Drawing.Size(653, 259);
             this.dataGridViewCarDetails.TabIndex = 66;
             this.dataGridViewCarDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCarDetails_CellClick_1);
             // 
@@ -519,11 +525,62 @@
             this.comboBoxCarModel.TabIndex = 67;
             this.comboBoxCarModel.ValueMember = "CarBrand_ID";
             // 
+            // pictureBoxCar
+            // 
+            this.pictureBoxCar.Location = new System.Drawing.Point(14, 354);
+            this.pictureBoxCar.Name = "pictureBoxCar";
+            this.pictureBoxCar.Size = new System.Drawing.Size(278, 256);
+            this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCar.TabIndex = 68;
+            this.pictureBoxCar.TabStop = false;
+            // 
+            // txtImgPath
+            // 
+            this.txtImgPath.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImgPath.Location = new System.Drawing.Point(503, 247);
+            this.txtImgPath.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtImgPath.Name = "txtImgPath";
+            this.txtImgPath.Size = new System.Drawing.Size(275, 27);
+            this.txtImgPath.TabIndex = 70;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(355, 248);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(118, 22);
+            this.label16.TabIndex = 69;
+            this.label16.Text = "Image Path";
+            // 
+            // btnBrowseImg
+            // 
+            this.btnBrowseImg.BackColor = System.Drawing.Color.Coral;
+            this.btnBrowseImg.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowseImg.Location = new System.Drawing.Point(801, 248);
+            this.btnBrowseImg.Name = "btnBrowseImg";
+            this.btnBrowseImg.Size = new System.Drawing.Size(97, 27);
+            this.btnBrowseImg.TabIndex = 71;
+            this.btnBrowseImg.Text = "Browse";
+            this.btnBrowseImg.UseVisualStyleBackColor = false;
+            this.btnBrowseImg.Click += new System.EventHandler(this.btnBrowseImg_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // CtrlCarDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.btnBrowseImg);
+            this.Controls.Add(this.txtImgPath);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.pictureBoxCar);
             this.Controls.Add(this.comboBoxCarModel);
             this.Controls.Add(this.dataGridViewCarDetails);
             this.Controls.Add(this.groupBox1);
@@ -564,6 +621,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,5 +669,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewCarDetails;
         private System.Windows.Forms.ComboBox comboBoxCarModel;
+        private System.Windows.Forms.PictureBox pictureBoxCar;
+        private System.Windows.Forms.TextBox txtImgPath;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnBrowseImg;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

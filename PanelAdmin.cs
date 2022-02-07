@@ -37,7 +37,12 @@ namespace abcCarTradersV1
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult CloseConfirmation = MessageBox.Show("Do you want to quit?", "Quit application", MessageBoxButtons.OKCancel);
+            if (CloseConfirmation == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+  
         }
 
         private void btnCarDetails_Click(object sender, EventArgs e)
