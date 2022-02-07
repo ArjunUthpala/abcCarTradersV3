@@ -76,7 +76,7 @@ namespace abcCarTradersV1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnFilterReset_Click(object sender, EventArgs e)
         {
             comboBoxOrderType.SelectedIndex = -1;
             DisplayDateonLoad();

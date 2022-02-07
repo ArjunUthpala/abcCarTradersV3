@@ -175,7 +175,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(464, 27);
             this.txtAddress.TabIndex = 81;
-            this.txtAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddress_KeyPress);
+
             // 
             // groupBox1
             // 

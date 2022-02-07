@@ -40,11 +40,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBoxOrderType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnFilterReset = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMyOrders)).BeginInit();
@@ -157,7 +157,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnFilterReset);
             this.groupBox3.Controls.Add(this.comboBoxOrderType);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(414, 50);
@@ -192,19 +192,6 @@
             this.label2.Size = new System.Drawing.Size(187, 22);
             this.label2.TabIndex = 69;
             this.label2.Text = "Filter by Order Type";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Coral;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(398, 19);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 30);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "Reset Filter";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox4
             // 
@@ -253,6 +240,19 @@
             this.textBox2.Size = new System.Drawing.Size(95, 27);
             this.textBox2.TabIndex = 67;
             // 
+            // btnFilterReset
+            // 
+            this.btnFilterReset.BackColor = System.Drawing.Color.Coral;
+            this.btnFilterReset.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilterReset.Location = new System.Drawing.Point(408, 19);
+            this.btnFilterReset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFilterReset.Name = "btnFilterReset";
+            this.btnFilterReset.Size = new System.Drawing.Size(115, 30);
+            this.btnFilterReset.TabIndex = 79;
+            this.btnFilterReset.Text = "Reset Filter";
+            this.btnFilterReset.UseVisualStyleBackColor = false;
+            this.btnFilterReset.Click += new System.EventHandler(this.btnFilterReset_Click);
+            // 
             // CtrlCusOrderSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -297,10 +297,10 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBoxOrderType;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnFilterReset;
     }
 }
