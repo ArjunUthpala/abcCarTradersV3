@@ -66,7 +66,48 @@ namespace abcCarTradersV1
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
+            if (txtUsername.Text == "" && txtPassword.Text == "") //Error when all text box are blank
+            {
+                MessageBox.Show("Please fill Username and Old Password", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtUsername.Text == "") //Error when username isn't filled
+            {
+                MessageBox.Show("Please fill Username", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtPassword.Text == "") //Error when password isn't filled
+            {
+                MessageBox.Show("Please fill Password", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
+            else
+            {
+                List<tbl_user> userlist = UserBLL.GetUser(txtUsername.Text, txtPassword.Text);
+                if (userlist.Count == 0)
+                    MessageBox.Show("Please check Credentials!", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    if (txtNewPassword.Text == txtPasswordCheck.Text)
+                    {
+                        tbl_user user = new tbl_user();
+                        user = userlist.First();
+                        UserStatic.NICNum = user.NICNum;
+
+                        user.Password = txtNewPassword.Text;
+                        UserBLL.UpdateUser(user);
+
+                        MessageBox.Show("Successfully password changed", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        FrmLogin frm = new FrmLogin();
+                        this.Hide();
+                        frm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter matching passwords", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }
