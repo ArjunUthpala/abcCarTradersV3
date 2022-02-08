@@ -412,9 +412,9 @@
             // dataGridViewCarPartsDetails
             // 
             this.dataGridViewCarPartsDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCarPartsDetails.Location = new System.Drawing.Point(317, 344);
+            this.dataGridViewCarPartsDetails.Location = new System.Drawing.Point(317, 343);
             this.dataGridViewCarPartsDetails.Name = "dataGridViewCarPartsDetails";
-            this.dataGridViewCarPartsDetails.Size = new System.Drawing.Size(646, 334);
+            this.dataGridViewCarPartsDetails.Size = new System.Drawing.Size(646, 267);
             this.dataGridViewCarPartsDetails.TabIndex = 101;
             this.dataGridViewCarPartsDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCarPartsDetails_CellClick);
             // 
@@ -454,7 +454,7 @@
             // 
             // pictureBoxCarPart
             // 
-            this.pictureBoxCarPart.Location = new System.Drawing.Point(16, 392);
+            this.pictureBoxCarPart.Location = new System.Drawing.Point(16, 323);
             this.pictureBoxCarPart.Name = "pictureBoxCarPart";
             this.pictureBoxCarPart.Size = new System.Drawing.Size(285, 285);
             this.pictureBoxCarPart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -497,7 +497,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CtrlCarPartsDetails";
-            this.Size = new System.Drawing.Size(977, 696);
+            this.Size = new System.Drawing.Size(977, 626);
             this.Load += new System.EventHandler(this.CtrlCarPartsDetails_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

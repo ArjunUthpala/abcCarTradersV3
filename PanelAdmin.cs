@@ -17,14 +17,14 @@ namespace abcCarTradersV1
             InitializeComponent();
             CurrentTabIndicator.Height = btnDash.Height;
             CurrentTabIndicator.Top = btnDash.Top;
-            ctrlAdminDash2.BringToFront();
+            ctrlAdminDash1.BringToFront();
         }
 
         private void btnDash_Click(object sender, EventArgs e)
         {
             CurrentTabIndicator.Height = btnDash.Height;
             CurrentTabIndicator.Top = btnDash.Top;
-            ctrlAdminDash2.BringToFront();
+            ctrlAdminDash1.BringToFront();
         }
 
 
@@ -32,7 +32,7 @@ namespace abcCarTradersV1
         {
             CurrentTabIndicator.Height = btnOrderDetails.Height;
             CurrentTabIndicator.Top = btnOrderDetails.Top;
-            ctrlOrderDetails1.BringToFront();
+            ctrlOrderDetails2.BringToFront();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace abcCarTradersV1
         {
             CurrentTabIndicator.Height = btnCarDetails.Height;
             CurrentTabIndicator.Top = btnCarDetails.Top;
-            ctrlCarDetails.BringToFront();
+            ctrlCarDetails1.BringToFront();
         }
 
         private void btnCarPartsDetails_Click(object sender, EventArgs e)
@@ -57,6 +57,7 @@ namespace abcCarTradersV1
             CurrentTabIndicator.Height = btnCarPartsDetails.Height;
             CurrentTabIndicator.Top = btnCarPartsDetails.Top;
             ctrlCarPartsDetails1.BringToFront();
+           
         }
 
         private void AdminPanel_Load(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace abcCarTradersV1
         {
             CurrentTabIndicator.Height = btnReports.Height;
             CurrentTabIndicator.Top = btnReports.Top;
-            ctrlReports1.BringToFront();
+            ctrlReports2.BringToFront();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

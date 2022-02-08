@@ -17,6 +17,7 @@ namespace abcCarTradersV1
             InitializeComponent();
             CurrentTabIndicator.Height = btnCusHome.Height;
             CurrentTabIndicator.Top = btnCusHome.Top;
+            //   ctrlCusProfile1.BringToFront();
             ctrlCusDetails1.BringToFront();
         }
 

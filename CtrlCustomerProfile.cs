@@ -13,23 +13,22 @@ using DAL.DAO;
 using DAL.DTO;
 using System.IO;
 
-
 namespace abcCarTradersV1
 {
-    public partial class CtrlCusDetails : UserControl
+    public partial class CtrlCustomerProfile : UserControl
     {
         string customer_NIC = Convert.ToString(UserStatic.NICNum);
-        public CtrlCusDetails()
+        public CtrlCustomerProfile()
         {
             InitializeComponent();
         }
 
-        private void CtrlCusDetails_Load(object sender, EventArgs e)
+        private void CtrlCusProfile_Load(object sender, EventArgs e)
         {
-            DisplayDataonLoad();
+            DataOnLoad();
         }
 
-        void DisplayDataonLoad()
+        void DataOnLoad()
         {
             tbl_customer cus = new tbl_customer();
             cus = CustomerBLL.GetCustomer(customer_NIC);
@@ -59,14 +58,10 @@ namespace abcCarTradersV1
                 cus.ContactNum = Convert.ToInt32(txtContactNum.Text);
                 cus.HomeAddress = txtAddress.Text;
                 CustomerBLL.UpdateCustomer(cus);
-                DisplayDataonLoad();
+                DataOnLoad();
                 MessageBox.Show("Profile Successfully Updated!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -37,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNIC = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBoxIsCustomer = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -144,16 +143,6 @@
             this.label3.TabIndex = 75;
             this.label3.Text = "NIC Number";
             // 
-            // checkBoxIsCustomer
-            // 
-            this.checkBoxIsCustomer.AutoSize = true;
-            this.checkBoxIsCustomer.Location = new System.Drawing.Point(573, 517);
-            this.checkBoxIsCustomer.Name = "checkBoxIsCustomer";
-            this.checkBoxIsCustomer.Size = new System.Drawing.Size(126, 17);
-            this.checkBoxIsCustomer.TabIndex = 79;
-            this.checkBoxIsCustomer.Text = "checkBoxIsCustomer";
-            this.checkBoxIsCustomer.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -175,7 +164,6 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(464, 27);
             this.txtAddress.TabIndex = 81;
-
             // 
             // groupBox1
             // 
@@ -309,7 +297,6 @@
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.checkBoxIsCustomer);
             this.Name = "CtrlRegister";
             this.Size = new System.Drawing.Size(720, 550);
             this.Load += new System.EventHandler(this.CtrlRegister_Load);
@@ -318,7 +305,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -331,7 +317,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNIC;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBoxIsCustomer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.GroupBox groupBox1;

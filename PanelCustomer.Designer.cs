@@ -46,8 +46,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCusUname = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.ctrlCusCarPartOrder1 = new abcCarTradersV1.CtrlCusCarPartOrder();
             this.ctrlCusOrderSummary1 = new abcCarTradersV1.CtrlCusOrderSummary();
+            this.ctrlCusCarPartOrder1 = new abcCarTradersV1.CtrlCusCarPartOrder();
             this.ctrlCusCarOrder1 = new abcCarTradersV1.CtrlCusCarOrder();
             this.ctrlCusDetails1 = new abcCarTradersV1.CtrlCusDetails();
             label3 = new System.Windows.Forms.Label();
@@ -279,45 +279,44 @@
             this.txtCusUname.Size = new System.Drawing.Size(105, 27);
             this.txtCusUname.TabIndex = 9;
             // 
-            // ctrlCusCarPartOrder1
-            // 
-            this.ctrlCusCarPartOrder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.ctrlCusCarPartOrder1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlCusCarPartOrder1.Location = new System.Drawing.Point(288, 76);
-            this.ctrlCusCarPartOrder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ctrlCusCarPartOrder1.Name = "ctrlCusCarPartOrder1";
-            this.ctrlCusCarPartOrder1.Size = new System.Drawing.Size(977, 626);
-            this.ctrlCusCarPartOrder1.TabIndex = 8;
-            // 
             // ctrlCusOrderSummary1
             // 
             this.ctrlCusOrderSummary1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.ctrlCusOrderSummary1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlCusOrderSummary1.Location = new System.Drawing.Point(288, 76);
+            this.ctrlCusOrderSummary1.Location = new System.Drawing.Point(290, 76);
             this.ctrlCusOrderSummary1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctrlCusOrderSummary1.Name = "ctrlCusOrderSummary1";
             this.ctrlCusOrderSummary1.Size = new System.Drawing.Size(977, 626);
-            this.ctrlCusOrderSummary1.TabIndex = 9;
+            this.ctrlCusOrderSummary1.TabIndex = 6;
+            // 
+            // ctrlCusCarPartOrder1
+            // 
+            this.ctrlCusCarPartOrder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlCusCarPartOrder1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCusCarPartOrder1.Location = new System.Drawing.Point(290, 76);
+            this.ctrlCusCarPartOrder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlCusCarPartOrder1.Name = "ctrlCusCarPartOrder1";
+            this.ctrlCusCarPartOrder1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlCusCarPartOrder1.TabIndex = 7;
             // 
             // ctrlCusCarOrder1
             // 
             this.ctrlCusCarOrder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.ctrlCusCarOrder1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlCusCarOrder1.Location = new System.Drawing.Point(288, 76);
+            this.ctrlCusCarOrder1.Location = new System.Drawing.Point(290, 76);
             this.ctrlCusCarOrder1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ctrlCusCarOrder1.Name = "ctrlCusCarOrder1";
             this.ctrlCusCarOrder1.Size = new System.Drawing.Size(977, 626);
-            this.ctrlCusCarOrder1.TabIndex = 10;
+            this.ctrlCusCarOrder1.TabIndex = 8;
             // 
             // ctrlCusDetails1
             // 
-            this.ctrlCusDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.ctrlCusDetails1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlCusDetails1.Location = new System.Drawing.Point(288, 76);
-            this.ctrlCusDetails1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlCusDetails1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCusDetails1.Location = new System.Drawing.Point(290, 76);
+            this.ctrlCusDetails1.Margin = new System.Windows.Forms.Padding(4);
             this.ctrlCusDetails1.Name = "ctrlCusDetails1";
             this.ctrlCusDetails1.Size = new System.Drawing.Size(977, 626);
-            this.ctrlCusDetails1.TabIndex = 11;
+            this.ctrlCusDetails1.TabIndex = 9;
             // 
             // PanelCustomer
             // 
@@ -328,10 +327,10 @@
             this.Controls.Add(this.ctrlCusDetails1);
             this.Controls.Add(this.ctrlCusCarOrder1);
             this.Controls.Add(this.ctrlCusCarPartOrder1);
+            this.Controls.Add(this.ctrlCusOrderSummary1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ctrlCusOrderSummary1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PanelCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -364,8 +363,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnCusHome;
         private System.Windows.Forms.TextBox txtCusUname;
-        private CtrlCusCarPartOrder ctrlCusCarPartOrder1;
         private CtrlCusOrderSummary ctrlCusOrderSummary1;
+        private CtrlCusCarPartOrder ctrlCusCarPartOrder1;
         private CtrlCusCarOrder ctrlCusCarOrder1;
         private CtrlCusDetails ctrlCusDetails1;
     }

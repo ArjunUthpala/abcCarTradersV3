@@ -1,7 +1,7 @@
 ﻿
 namespace abcCarTradersV1
 {
-    partial class CtrlCusDetails
+    partial class CtrlCustomerProfile
     {
         /// <summary> 
         /// Required designer variable.
@@ -43,6 +43,9 @@ namespace abcCarTradersV1
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNIC = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
@@ -50,9 +53,6 @@ namespace abcCarTradersV1
             this.txtPasswordCheck = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,7 +65,7 @@ namespace abcCarTradersV1
             this.panel3.Location = new System.Drawing.Point(37, 16);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(903, 65);
-            this.panel3.TabIndex = 92;
+            this.panel3.TabIndex = 89;
             // 
             // labelBrand
             // 
@@ -96,7 +96,7 @@ namespace abcCarTradersV1
             this.groupBox1.Location = new System.Drawing.Point(37, 99);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(903, 271);
-            this.groupBox1.TabIndex = 90;
+            this.groupBox1.TabIndex = 87;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Details";
             // 
@@ -226,6 +226,41 @@ namespace abcCarTradersV1
             this.txtNIC.Size = new System.Drawing.Size(263, 27);
             this.txtNIC.TabIndex = 76;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(151, 85);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(185, 22);
+            this.label7.TabIndex = 77;
+            this.label7.Text = "Enter Old Password";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(151, 41);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 22);
+            this.label8.TabIndex = 75;
+            this.label8.Text = "Enter Username";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(396, 40);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(186, 27);
+            this.txtUsername.TabIndex = 76;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnChangePassword);
@@ -242,7 +277,7 @@ namespace abcCarTradersV1
             this.groupBox2.Location = new System.Drawing.Point(37, 382);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(903, 228);
-            this.groupBox2.TabIndex = 91;
+            this.groupBox2.TabIndex = 88;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Login Credentials";
             // 
@@ -258,7 +293,7 @@ namespace abcCarTradersV1
             this.btnChangePassword.TabIndex = 86;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+        
             // 
             // txtNewPassword
             // 
@@ -316,42 +351,7 @@ namespace abcCarTradersV1
             this.txtPassword.TabIndex = 78;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(151, 85);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(185, 22);
-            this.label7.TabIndex = 77;
-            this.label7.Text = "Enter Old Password";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(151, 41);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 22);
-            this.label8.TabIndex = 75;
-            this.label8.Text = "Enter Username";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(396, 40);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(186, 27);
-            this.txtUsername.TabIndex = 76;
-            // 
-            // CtrlCusDetails
+            // CtrlCusProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -361,9 +361,9 @@ namespace abcCarTradersV1
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "CtrlCusDetails";
+            this.Name = "CtrlCusProfile";
             this.Size = new System.Drawing.Size(977, 626);
-            this.Load += new System.EventHandler(this.CtrlCusDetails_Load);
+            this.Load += new System.EventHandler(this.CtrlCusProfile_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -390,6 +390,9 @@ namespace abcCarTradersV1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNIC;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.TextBox txtNewPassword;
@@ -397,8 +400,5 @@ namespace abcCarTradersV1
         private System.Windows.Forms.TextBox txtPasswordCheck;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtUsername;
     }
 }

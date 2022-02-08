@@ -25,15 +25,15 @@ namespace abcCarTradersV1
             {
                 if (txtUsername.Text == "" && txtPassword.Text == "") //Error when all text box are blank
                 {
-                    MessageBox.Show("Unable to fill Username and Password", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill Username and Password", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (txtUsername.Text == "") //Error when username isn't filled
                 {
-                    MessageBox.Show("Unable to fill Username", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill Username", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (txtPassword.Text == "") //Error when password isn't filled
                 {
-                    MessageBox.Show("Unable to fill Password", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill Password", "Error Message!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 else
