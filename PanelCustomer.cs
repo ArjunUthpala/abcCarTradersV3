@@ -17,7 +17,7 @@ namespace abcCarTradersV1
             InitializeComponent();
             CurrentTabIndicator.Height = btnCusHome.Height;
             CurrentTabIndicator.Top = btnCusHome.Top;
-            ctrlCusDetails1.BringToFront();
+            ctrlCusHome1.BringToFront();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace abcCarTradersV1
         {
             CurrentTabIndicator.Height = btnCusHome.Height;
             CurrentTabIndicator.Top = btnCusHome.Top;
-            ctrlCusDetails1.BringToFront();
+            ctrlCusHome1.BringToFront();
         }
 
         private void btnOrderCar_Click(object sender, EventArgs e)
@@ -70,6 +70,13 @@ namespace abcCarTradersV1
             CurrentTabIndicator.Height = btnMyOrders.Height;
             CurrentTabIndicator.Top = btnMyOrders.Top;
             ctrlCusOrderSummary1.BringToFront();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            CurrentTabIndicator.Height = btnProfile.Height;
+            CurrentTabIndicator.Top = btnProfile.Top;
+            ctrlCusDetails1.BringToFront();
         }
     }
 }

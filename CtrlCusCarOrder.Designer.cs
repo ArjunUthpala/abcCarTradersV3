@@ -53,11 +53,11 @@
             this.numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.pictureBoxCar = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
+            this.comboBoxCarBrand = new System.Windows.Forms.ComboBox();
+            this.btnCarSearch = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnCarSearch = new System.Windows.Forms.Button();
-            this.comboBoxCarBrand = new System.Windows.Forms.ComboBox();
-            this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarDetails)).BeginInit();
@@ -353,6 +353,37 @@
             this.groupBox2.TabIndex = 94;
             this.groupBox2.TabStop = false;
             // 
+            // comboBoxCarModel
+            // 
+            this.comboBoxCarModel.FormattingEnabled = true;
+            this.comboBoxCarModel.Location = new System.Drawing.Point(288, 19);
+            this.comboBoxCarModel.Name = "comboBoxCarModel";
+            this.comboBoxCarModel.Size = new System.Drawing.Size(104, 28);
+            this.comboBoxCarModel.TabIndex = 109;
+            // 
+            // comboBoxCarBrand
+            // 
+            this.comboBoxCarBrand.FormattingEnabled = true;
+            this.comboBoxCarBrand.Location = new System.Drawing.Point(82, 19);
+            this.comboBoxCarBrand.Name = "comboBoxCarBrand";
+            this.comboBoxCarBrand.Size = new System.Drawing.Size(104, 28);
+            this.comboBoxCarBrand.TabIndex = 108;
+            this.comboBoxCarBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxCarBrand_SelectedIndexChanged);
+            // 
+            // btnCarSearch
+            // 
+            this.btnCarSearch.BackColor = System.Drawing.Color.Coral;
+            this.btnCarSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCarSearch.Location = new System.Drawing.Point(414, 17);
+            this.btnCarSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCarSearch.Name = "btnCarSearch";
+            this.btnCarSearch.Size = new System.Drawing.Size(105, 30);
+            this.btnCarSearch.TabIndex = 107;
+            this.btnCarSearch.Text = "Search";
+            this.btnCarSearch.UseVisualStyleBackColor = false;
+            this.btnCarSearch.Click += new System.EventHandler(this.btnCarSearch_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -378,37 +409,6 @@
             this.label12.Size = new System.Drawing.Size(67, 22);
             this.label12.TabIndex = 55;
             this.label12.Text = "Model";
-            // 
-            // btnCarSearch
-            // 
-            this.btnCarSearch.BackColor = System.Drawing.Color.Coral;
-            this.btnCarSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCarSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCarSearch.Location = new System.Drawing.Point(414, 17);
-            this.btnCarSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCarSearch.Name = "btnCarSearch";
-            this.btnCarSearch.Size = new System.Drawing.Size(105, 30);
-            this.btnCarSearch.TabIndex = 107;
-            this.btnCarSearch.Text = "Search";
-            this.btnCarSearch.UseVisualStyleBackColor = false;
-            this.btnCarSearch.Click += new System.EventHandler(this.btnCarSearch_Click);
-            // 
-            // comboBoxCarBrand
-            // 
-            this.comboBoxCarBrand.FormattingEnabled = true;
-            this.comboBoxCarBrand.Location = new System.Drawing.Point(82, 19);
-            this.comboBoxCarBrand.Name = "comboBoxCarBrand";
-            this.comboBoxCarBrand.Size = new System.Drawing.Size(104, 28);
-            this.comboBoxCarBrand.TabIndex = 108;
-            this.comboBoxCarBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxCarBrand_SelectedIndexChanged);
-            // 
-            // comboBoxCarModel
-            // 
-            this.comboBoxCarModel.FormattingEnabled = true;
-            this.comboBoxCarModel.Location = new System.Drawing.Point(288, 19);
-            this.comboBoxCarModel.Name = "comboBoxCarModel";
-            this.comboBoxCarModel.Size = new System.Drawing.Size(104, 28);
-            this.comboBoxCarModel.TabIndex = 109;
             // 
             // CtrlCusCarOrder
             // 

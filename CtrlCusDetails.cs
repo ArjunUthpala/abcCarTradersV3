@@ -26,7 +26,7 @@ namespace abcCarTradersV1
 
         private void CtrlCusDetails_Load(object sender, EventArgs e)
         {
-            DisplayDataonLoad();
+          //  DisplayDataonLoad();
         }
 
         void DisplayDataonLoad()
@@ -52,13 +52,13 @@ namespace abcCarTradersV1
                 MessageBox.Show("Please Your Enter Home Address");
             else
             {
-                tbl_customer cus = new tbl_customer();
-                cus = CustomerBLL.GetCustomer(customer_NIC);
-                cus.FirstName = txtFirstName.Text;
-                cus.LastName = txtLastName.Text;
-                cus.ContactNum = Convert.ToInt32(txtContactNum.Text);
-                cus.HomeAddress = txtAddress.Text;
-                CustomerBLL.UpdateCustomer(cus);
+                tbl_customer customer = new tbl_customer();
+                customer = CustomerBLL.GetCustomer(customer_NIC);
+                customer.FirstName = txtFirstName.Text;
+                customer.LastName = txtLastName.Text;
+                customer.ContactNum = Convert.ToInt32(txtContactNum.Text);
+                customer.HomeAddress = txtAddress.Text;
+                CustomerBLL.UpdateCustomer(customer);
                 DisplayDataonLoad();
                 MessageBox.Show("Profile Successfully Updated!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -108,6 +108,11 @@ namespace abcCarTradersV1
                     }
                 }
             }
+        }
+
+        private void CtrlCusDetails_VisibleChanged(object sender, EventArgs e)
+        {
+           // DisplayDataonLoad();
         }
     }
 }

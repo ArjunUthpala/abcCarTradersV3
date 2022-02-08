@@ -29,8 +29,6 @@ namespace abcCarTradersV1
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.labelBrand = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnUpdateCus = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -53,30 +51,9 @@ namespace abcCarTradersV1
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel3.Controls.Add(this.labelBrand);
-            this.panel3.Location = new System.Drawing.Point(37, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(903, 65);
-            this.panel3.TabIndex = 92;
-            // 
-            // labelBrand
-            // 
-            this.labelBrand.AutoSize = true;
-            this.labelBrand.Font = new System.Drawing.Font("Century Gothic", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBrand.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelBrand.Location = new System.Drawing.Point(114, 3);
-            this.labelBrand.Name = "labelBrand";
-            this.labelBrand.Size = new System.Drawing.Size(697, 58);
-            this.labelBrand.TabIndex = 1;
-            this.labelBrand.Text = "Welcome to ABC Car Traders";
             // 
             // groupBox1
             // 
@@ -93,7 +70,7 @@ namespace abcCarTradersV1
             this.groupBox1.Controls.Add(this.txtNIC);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(37, 99);
+            this.groupBox1.Location = new System.Drawing.Point(37, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(903, 271);
             this.groupBox1.TabIndex = 90;
@@ -239,7 +216,7 @@ namespace abcCarTradersV1
             this.groupBox2.Controls.Add(this.txtUsername);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(37, 382);
+            this.groupBox2.Location = new System.Drawing.Point(37, 332);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(903, 228);
             this.groupBox2.TabIndex = 91;
@@ -356,16 +333,14 @@ namespace abcCarTradersV1
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CtrlCusDetails";
             this.Size = new System.Drawing.Size(977, 626);
             this.Load += new System.EventHandler(this.CtrlCusDetails_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.VisibleChanged += new System.EventHandler(this.CtrlCusDetails_VisibleChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -375,9 +350,6 @@ namespace abcCarTradersV1
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label labelBrand;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnUpdateCus;
         private System.Windows.Forms.Label label10;

@@ -31,6 +31,7 @@ C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCarDeta
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCarPartsDetails.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlAdminDash.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusCarPartOrder.resources
+C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusDetails.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusHome.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusCarOrder.resources
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusOrderSummary.resources
@@ -49,4 +50,3 @@ C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.Core
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.CopyComplete
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.exe
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.pdb
-C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.CtrlCusDetails.resources
