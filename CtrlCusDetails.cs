@@ -16,5 +16,10 @@ namespace abcCarTradersV1
         {
             InitializeComponent();
         }
+
+        private void CtrlCusDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

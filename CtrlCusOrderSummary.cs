@@ -81,5 +81,32 @@ namespace abcCarTradersV1
             comboBoxOrderType.SelectedIndex = -1;
             DisplayDateonLoad();
         }
+
+        private void dataGridViewMyOrders_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtOrderIDDisplay.Text = dataGridViewMyOrders.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtItemCode.Text = dataGridViewMyOrders.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtOrderType.Text = dataGridViewMyOrders.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txtOrderDate.Text = dataGridViewMyOrders.Rows[e.RowIndex].Cells[1].Value.ToString();
+            numericUpDownQTY.Value = Convert.ToInt32(dataGridViewMyOrders.Rows[e.RowIndex].Cells[6].Value.ToString());
+            txtTotalAmt.Text = dataGridViewMyOrders.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtCurrOrderState.Text = dataGridViewMyOrders.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void btnGetItem_Click(object sender, EventArgs e)
+        {
+            if (txtOrderType.Text == "Car")
+            {
+                FrmCarView frmCar = new FrmCarView();
+                FrmCarView.itemcode = Convert.ToString(txtItemCode.Text);
+                frmCar.Show();
+            }
+            else// if(txtOrderType.Text == "Car Part")
+            {
+                FrmCarPartView frmCarPart = new FrmCarPartView();
+                FrmCarPartView.itemcode = Convert.ToString(txtItemCode.Text);
+                frmCarPart.Show();
+            }
+        }
     }
 }

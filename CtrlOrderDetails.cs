@@ -19,8 +19,8 @@ namespace abcCarTradersV1
     {
         string cusNIC = "";
         int order_ID;
-        int car_ID;
-        string item_code = "";
+     //   int car_ID;
+     //   string item_code = "";
         OrderDetailsDTO orderState = new OrderDetailsDTO();
         public CtrlOrderDetails()
         {
