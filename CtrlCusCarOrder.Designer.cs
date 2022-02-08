@@ -260,7 +260,7 @@
             // dataGridViewCarDetails
             // 
             this.dataGridViewCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCarDetails.Location = new System.Drawing.Point(17, 327);
+            this.dataGridViewCarDetails.Location = new System.Drawing.Point(17, 328);
             this.dataGridViewCarDetails.Name = "dataGridViewCarDetails";
             this.dataGridViewCarDetails.Size = new System.Drawing.Size(648, 280);
             this.dataGridViewCarDetails.TabIndex = 94;
@@ -325,7 +325,7 @@
             // 
             // pictureBoxCar
             // 
-            this.pictureBoxCar.Location = new System.Drawing.Point(682, 327);
+            this.pictureBoxCar.Location = new System.Drawing.Point(682, 328);
             this.pictureBoxCar.Name = "pictureBoxCar";
             this.pictureBoxCar.Size = new System.Drawing.Size(278, 278);
             this.pictureBoxCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

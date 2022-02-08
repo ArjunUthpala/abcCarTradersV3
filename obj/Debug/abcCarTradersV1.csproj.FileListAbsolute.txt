@@ -48,3 +48,5 @@ C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.Copy
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.exe
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.pdb
 C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.FrmCarView.resources
+C:\Users\ASUS\source\repos\abcCarTradersV3\obj\Debug\abcCarTradersV1.FrmCarPartView.resources

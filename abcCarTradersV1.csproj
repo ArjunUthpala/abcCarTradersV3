@@ -117,6 +117,18 @@
     <Compile Include="CtrlSignIn.Designer.cs">
       <DependentUpon>CtrlSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCarPartView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCarPartView.Designer.cs">
+      <DependentUpon>FrmCarPartView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCarView.Designer.cs">
+      <DependentUpon>FrmCarView.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlSignIn.resx">
       <DependentUpon>CtrlSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCarPartView.resx">
+      <DependentUpon>FrmCarPartView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCarView.resx">
+      <DependentUpon>FrmCarView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

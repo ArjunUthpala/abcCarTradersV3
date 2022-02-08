@@ -38,14 +38,9 @@
             this.btnSetState = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTotalAmt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtItemCode = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtOrderDate = new System.Windows.Forms.TextBox();
             this.txtOrderType = new System.Windows.Forms.TextBox();
@@ -56,10 +51,16 @@
             this.txtCusName = new System.Windows.Forms.TextBox();
             this.txtCusContact = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtOrderIDDisplay = new System.Windows.Forms.TextBox();
+            this.numericUpDownQTY = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTotalAmt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnGetItem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllOrders)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQTY)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,6 +84,7 @@
             this.dataGridViewAllOrders.Name = "dataGridViewAllOrders";
             this.dataGridViewAllOrders.Size = new System.Drawing.Size(946, 282);
             this.dataGridViewAllOrders.TabIndex = 24;
+            this.dataGridViewAllOrders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAllOrders_CellClick);
             // 
             // label10
             // 
@@ -152,6 +154,7 @@
             this.btnSetState.TabIndex = 71;
             this.btnSetState.Text = "Set State";
             this.btnSetState.UseVisualStyleBackColor = false;
+            this.btnSetState.Click += new System.EventHandler(this.btnSetState_Click);
             // 
             // groupBox1
             // 
@@ -179,54 +182,11 @@
             this.groupBox2.TabIndex = 73;
             this.groupBox2.TabStop = false;
             // 
-            // numericUpDown
-            // 
-            this.numericUpDown.Location = new System.Drawing.Point(867, 154);
-            this.numericUpDown.Name = "numericUpDown";
-            this.numericUpDown.Size = new System.Drawing.Size(92, 26);
-            this.numericUpDown.TabIndex = 131;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(687, 196);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 22);
-            this.label2.TabIndex = 129;
-            this.label2.Text = "Total Amount";
-            // 
-            // txtTotalAmt
-            // 
-            this.txtTotalAmt.Enabled = false;
-            this.txtTotalAmt.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalAmt.Location = new System.Drawing.Point(867, 196);
-            this.txtTotalAmt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTotalAmt.Name = "txtTotalAmt";
-            this.txtTotalAmt.Size = new System.Drawing.Size(92, 27);
-            this.txtTotalAmt.TabIndex = 130;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(687, 153);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 22);
-            this.label3.TabIndex = 126;
-            this.label3.Text = "Order Quantity";
-            // 
             // txtItemCode
             // 
             this.txtItemCode.Enabled = false;
             this.txtItemCode.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemCode.Location = new System.Drawing.Point(146, 197);
+            this.txtItemCode.Location = new System.Drawing.Point(146, 281);
             this.txtItemCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Size = new System.Drawing.Size(91, 27);
@@ -238,7 +198,7 @@
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(19, 198);
+            this.label15.Location = new System.Drawing.Point(19, 282);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(108, 22);
@@ -258,22 +218,13 @@
             this.label4.TabIndex = 132;
             this.label4.Text = "Order ID";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(146, 153);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 27);
-            this.textBox1.TabIndex = 133;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(19, 285);
+            this.label5.Location = new System.Drawing.Point(19, 241);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 22);
@@ -284,7 +235,7 @@
             // 
             this.txtOrderDate.Enabled = false;
             this.txtOrderDate.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderDate.Location = new System.Drawing.Point(176, 284);
+            this.txtOrderDate.Location = new System.Drawing.Point(176, 240);
             this.txtOrderDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtOrderDate.Name = "txtOrderDate";
             this.txtOrderDate.Size = new System.Drawing.Size(103, 27);
@@ -294,7 +245,7 @@
             // 
             this.txtOrderType.Enabled = false;
             this.txtOrderType.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderType.Location = new System.Drawing.Point(146, 242);
+            this.txtOrderType.Location = new System.Drawing.Point(146, 198);
             this.txtOrderType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtOrderType.Name = "txtOrderType";
             this.txtOrderType.Size = new System.Drawing.Size(91, 27);
@@ -306,7 +257,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(19, 243);
+            this.label6.Location = new System.Drawing.Point(19, 199);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 22);
@@ -317,10 +268,11 @@
             // 
             this.txtCusAddress.Enabled = false;
             this.txtCusAddress.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCusAddress.Location = new System.Drawing.Point(411, 240);
+            this.txtCusAddress.Location = new System.Drawing.Point(681, 246);
             this.txtCusAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCusAddress.Multiline = true;
             this.txtCusAddress.Name = "txtCusAddress";
-            this.txtCusAddress.Size = new System.Drawing.Size(454, 27);
+            this.txtCusAddress.Size = new System.Drawing.Size(281, 67);
             this.txtCusAddress.TabIndex = 143;
             // 
             // label7
@@ -329,7 +281,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(309, 240);
+            this.label7.Location = new System.Drawing.Point(590, 246);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 22);
@@ -342,7 +294,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(309, 153);
+            this.label8.Location = new System.Drawing.Point(590, 159);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(159, 22);
@@ -351,8 +303,9 @@
             // 
             // txtCusName
             // 
+            this.txtCusName.Enabled = false;
             this.txtCusName.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCusName.Location = new System.Drawing.Point(480, 150);
+            this.txtCusName.Location = new System.Drawing.Point(761, 156);
             this.txtCusName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtCusName.Name = "txtCusName";
             this.txtCusName.Size = new System.Drawing.Size(145, 27);
@@ -362,7 +315,7 @@
             // 
             this.txtCusContact.Enabled = false;
             this.txtCusContact.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCusContact.Location = new System.Drawing.Point(498, 194);
+            this.txtCusContact.Location = new System.Drawing.Point(779, 200);
             this.txtCusContact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCusContact.Name = "txtCusContact";
             this.txtCusContact.Size = new System.Drawing.Size(127, 27);
@@ -374,19 +327,92 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(309, 195);
+            this.label9.Location = new System.Drawing.Point(590, 201);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(167, 22);
             this.label9.TabIndex = 138;
             this.label9.Text = "Contact Number";
             // 
+            // txtOrderIDDisplay
+            // 
+            this.txtOrderIDDisplay.Enabled = false;
+            this.txtOrderIDDisplay.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrderIDDisplay.Location = new System.Drawing.Point(146, 154);
+            this.txtOrderIDDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtOrderIDDisplay.Name = "txtOrderIDDisplay";
+            this.txtOrderIDDisplay.Size = new System.Drawing.Size(91, 27);
+            this.txtOrderIDDisplay.TabIndex = 144;
+            // 
+            // numericUpDownQTY
+            // 
+            this.numericUpDownQTY.Enabled = false;
+            this.numericUpDownQTY.Location = new System.Drawing.Point(457, 155);
+            this.numericUpDownQTY.Name = "numericUpDownQTY";
+            this.numericUpDownQTY.Size = new System.Drawing.Size(92, 26);
+            this.numericUpDownQTY.TabIndex = 136;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(297, 197);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 22);
+            this.label2.TabIndex = 134;
+            this.label2.Text = "Total Amount";
+            // 
+            // txtTotalAmt
+            // 
+            this.txtTotalAmt.Enabled = false;
+            this.txtTotalAmt.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalAmt.Location = new System.Drawing.Point(457, 197);
+            this.txtTotalAmt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTotalAmt.Name = "txtTotalAmt";
+            this.txtTotalAmt.Size = new System.Drawing.Size(92, 27);
+            this.txtTotalAmt.TabIndex = 135;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(297, 154);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 22);
+            this.label3.TabIndex = 133;
+            this.label3.Text = "Order Quantity";
+            // 
+            // btnGetItem
+            // 
+            this.btnGetItem.BackColor = System.Drawing.Color.Coral;
+            this.btnGetItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetItem.Location = new System.Drawing.Point(259, 280);
+            this.btnGetItem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGetItem.Name = "btnGetItem";
+            this.btnGetItem.Size = new System.Drawing.Size(115, 30);
+            this.btnGetItem.TabIndex = 69;
+            this.btnGetItem.Text = "Get Item";
+            this.btnGetItem.UseVisualStyleBackColor = false;
+            this.btnGetItem.Click += new System.EventHandler(this.btnGetItem_Click);
+            // 
             // CtrlOrderDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.btnGetItem);
+            this.Controls.Add(this.numericUpDownQTY);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtOrderIDDisplay);
+            this.Controls.Add(this.txtTotalAmt);
             this.Controls.Add(this.txtCusAddress);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtCusName);
@@ -397,11 +423,6 @@
             this.Controls.Add(this.txtOrderType);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTotalAmt);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtItemCode);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.groupBox2);
@@ -418,7 +439,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQTY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,14 +457,9 @@
         private System.Windows.Forms.Button btnSetState;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTotalAmt;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtItemCode;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtOrderDate;
         private System.Windows.Forms.TextBox txtOrderType;
@@ -454,5 +470,11 @@
         private System.Windows.Forms.TextBox txtCusName;
         private System.Windows.Forms.TextBox txtCusContact;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtOrderIDDisplay;
+        private System.Windows.Forms.NumericUpDown numericUpDownQTY;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTotalAmt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGetItem;
     }
 }
