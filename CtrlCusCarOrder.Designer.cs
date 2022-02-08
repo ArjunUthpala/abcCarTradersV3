@@ -52,11 +52,18 @@
             this.txtTotalAmt = new System.Windows.Forms.TextBox();
             this.numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.pictureBoxCar = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnCarSearch = new System.Windows.Forms.Button();
+            this.comboBoxCarBrand = new System.Windows.Forms.ComboBox();
+            this.comboBoxCarModel = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -66,7 +73,7 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(328, 57);
+            this.groupBox1.Location = new System.Drawing.Point(329, 124);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(216, 115);
             this.groupBox1.TabIndex = 93;
@@ -123,7 +130,7 @@
             // 
             this.txtItemCode.Enabled = false;
             this.txtItemCode.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemCode.Location = new System.Drawing.Point(187, 149);
+            this.txtItemCode.Location = new System.Drawing.Point(188, 216);
             this.txtItemCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Size = new System.Drawing.Size(124, 27);
@@ -135,7 +142,7 @@
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label15.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(39, 150);
+            this.label15.Location = new System.Drawing.Point(40, 217);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(108, 22);
@@ -146,7 +153,7 @@
             // 
             this.btnOder.BackColor = System.Drawing.Color.Coral;
             this.btnOder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOder.Location = new System.Drawing.Point(411, 233);
+            this.btnOder.Location = new System.Drawing.Point(412, 300);
             this.btnOder.Name = "btnOder";
             this.btnOder.Size = new System.Drawing.Size(118, 40);
             this.btnOder.TabIndex = 86;
@@ -173,7 +180,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(39, 105);
+            this.label7.Location = new System.Drawing.Point(40, 172);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 22);
@@ -186,7 +193,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(335, 192);
+            this.label6.Location = new System.Drawing.Point(336, 259);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 22);
@@ -199,7 +206,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(39, 60);
+            this.label2.Location = new System.Drawing.Point(40, 127);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 22);
@@ -212,7 +219,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(39, 192);
+            this.label3.Location = new System.Drawing.Point(40, 259);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 22);
@@ -231,7 +238,7 @@
             // 
             this.txtCarbrand.Enabled = false;
             this.txtCarbrand.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarbrand.Location = new System.Drawing.Point(187, 60);
+            this.txtCarbrand.Location = new System.Drawing.Point(188, 127);
             this.txtCarbrand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCarbrand.Name = "txtCarbrand";
             this.txtCarbrand.Size = new System.Drawing.Size(124, 27);
@@ -241,7 +248,7 @@
             // 
             this.txtCarModel.Enabled = false;
             this.txtCarModel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarModel.Location = new System.Drawing.Point(187, 104);
+            this.txtCarModel.Location = new System.Drawing.Point(188, 171);
             this.txtCarModel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCarModel.Name = "txtCarModel";
             this.txtCarModel.Size = new System.Drawing.Size(124, 27);
@@ -251,7 +258,7 @@
             // 
             this.txtYOM.Enabled = false;
             this.txtYOM.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYOM.Location = new System.Drawing.Point(404, 191);
+            this.txtYOM.Location = new System.Drawing.Point(405, 258);
             this.txtYOM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtYOM.Name = "txtYOM";
             this.txtYOM.Size = new System.Drawing.Size(124, 27);
@@ -260,9 +267,9 @@
             // dataGridViewCarDetails
             // 
             this.dataGridViewCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCarDetails.Location = new System.Drawing.Point(17, 328);
+            this.dataGridViewCarDetails.Location = new System.Drawing.Point(17, 386);
             this.dataGridViewCarDetails.Name = "dataGridViewCarDetails";
-            this.dataGridViewCarDetails.Size = new System.Drawing.Size(648, 280);
+            this.dataGridViewCarDetails.Size = new System.Drawing.Size(648, 222);
             this.dataGridViewCarDetails.TabIndex = 94;
             this.dataGridViewCarDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCarDetails_CellClick);
             // 
@@ -272,7 +279,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(297, 298);
+            this.label4.Location = new System.Drawing.Point(294, 350);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 22);
@@ -298,7 +305,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(39, 235);
+            this.label10.Location = new System.Drawing.Point(40, 302);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(133, 22);
@@ -309,7 +316,7 @@
             // 
             this.txtTotalAmt.Enabled = false;
             this.txtTotalAmt.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalAmt.Location = new System.Drawing.Point(219, 235);
+            this.txtTotalAmt.Location = new System.Drawing.Point(220, 302);
             this.txtTotalAmt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTotalAmt.Name = "txtTotalAmt";
             this.txtTotalAmt.Size = new System.Drawing.Size(92, 27);
@@ -317,7 +324,7 @@
             // 
             // numericUpDown
             // 
-            this.numericUpDown.Location = new System.Drawing.Point(219, 193);
+            this.numericUpDown.Location = new System.Drawing.Point(220, 260);
             this.numericUpDown.Name = "numericUpDown";
             this.numericUpDown.Size = new System.Drawing.Size(92, 26);
             this.numericUpDown.TabIndex = 105;
@@ -332,11 +339,83 @@
             this.pictureBoxCar.TabIndex = 106;
             this.pictureBoxCar.TabStop = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBoxCarModel);
+            this.groupBox2.Controls.Add(this.comboBoxCarBrand);
+            this.groupBox2.Controls.Add(this.btnCarSearch);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(19, 51);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(526, 58);
+            this.groupBox2.TabIndex = 94;
+            this.groupBox2.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(10, 22);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 22);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "Brand";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(214, 22);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 22);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Model";
+            // 
+            // btnCarSearch
+            // 
+            this.btnCarSearch.BackColor = System.Drawing.Color.Coral;
+            this.btnCarSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCarSearch.Location = new System.Drawing.Point(414, 17);
+            this.btnCarSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCarSearch.Name = "btnCarSearch";
+            this.btnCarSearch.Size = new System.Drawing.Size(105, 30);
+            this.btnCarSearch.TabIndex = 107;
+            this.btnCarSearch.Text = "Search";
+            this.btnCarSearch.UseVisualStyleBackColor = false;
+            this.btnCarSearch.Click += new System.EventHandler(this.btnCarSearch_Click);
+            // 
+            // comboBoxCarBrand
+            // 
+            this.comboBoxCarBrand.FormattingEnabled = true;
+            this.comboBoxCarBrand.Location = new System.Drawing.Point(82, 19);
+            this.comboBoxCarBrand.Name = "comboBoxCarBrand";
+            this.comboBoxCarBrand.Size = new System.Drawing.Size(104, 28);
+            this.comboBoxCarBrand.TabIndex = 108;
+            this.comboBoxCarBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxCarBrand_SelectedIndexChanged);
+            // 
+            // comboBoxCarModel
+            // 
+            this.comboBoxCarModel.FormattingEnabled = true;
+            this.comboBoxCarModel.Location = new System.Drawing.Point(288, 19);
+            this.comboBoxCarModel.Name = "comboBoxCarModel";
+            this.comboBoxCarModel.Size = new System.Drawing.Size(104, 28);
+            this.comboBoxCarModel.TabIndex = 109;
+            // 
             // CtrlCusCarOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBoxCar);
             this.Controls.Add(this.numericUpDown);
             this.Controls.Add(this.label10);
@@ -368,6 +447,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCarDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +479,11 @@
         private System.Windows.Forms.TextBox txtTotalAmt;
         private System.Windows.Forms.NumericUpDown numericUpDown;
         private System.Windows.Forms.PictureBox pictureBoxCar;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBoxCarModel;
+        private System.Windows.Forms.ComboBox comboBoxCarBrand;
+        private System.Windows.Forms.Button btnCarSearch;
     }
 }

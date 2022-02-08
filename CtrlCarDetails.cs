@@ -21,7 +21,7 @@ namespace abcCarTradersV1
         string item_code;
         string pictureName =  "";
         string imgPath = "";
-        CarDetailsDTO carDetailsDTO = new CarDetailsDTO();
+        CarDTO carDTO = new CarDTO();
         public CtrlCarDetails()
         {
             InitializeComponent();
@@ -30,21 +30,21 @@ namespace abcCarTradersV1
         private void CtrlCarDetails1_Load(object sender, EventArgs e)
         {
             DisplayDataonLoad();
-          
 
-            carDetailsDTO = CarDetailsBLL.GetAll();
+
+            carDTO = CarDetailsBLL.GetAll();
 
             //load Car brands to combo box
             //  List<tbl_car_brand> CarBrands = new List<tbl_car_brand>();
             //  CarBrands = CarBrandsBLL.GetCarBrands();
-            comboBoxCarBrand.DataSource = carDetailsDTO.CarBrands;
+            comboBoxCarBrand.DataSource = carDTO.CarBrands;
             comboBoxCarBrand.DisplayMember = "CarBrand";
             comboBoxCarBrand.ValueMember = "CarBrand_ID";
             comboBoxCarBrand.SelectedIndex = -1;
 
           //  List<tbl_car_model> CarModels = new List<tbl_car_model>();
           //  CarModels = CarModelBLL.GetCarModels();
-            comboBoxCarModel.DataSource = carDetailsDTO.CarModels;
+            comboBoxCarModel.DataSource = carDTO.CarModels;
             comboBoxCarModel.DisplayMember = "CarModel";
             comboBoxCarModel.ValueMember = "CarModel_ID";
             comboBoxCarModel.SelectedIndex = -1;
@@ -345,7 +345,7 @@ namespace abcCarTradersV1
         {
             if (comboBoxCarBrand.SelectedIndex != -1)
             {
-                comboBoxCarModel.DataSource = carDetailsDTO.CarModels.Where(x => x.CarBrand_ID ==
+                comboBoxCarModel.DataSource = carDTO.CarModels.Where(x => x.CarBrand_ID ==
                 Convert.ToInt32(comboBoxCarBrand.SelectedValue)).ToList();
                 // Convert.ToInt32(cmbDepartment.SelectedValue)).ToList();
                 //int carbrand_id = Convert.ToInt32(comboBoxCarBrand.ValueMember);
