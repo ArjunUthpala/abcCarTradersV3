@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ABCCarTradersDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ABCCarTradersDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABCCarTradersDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CtrlCarDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -243,6 +248,17 @@
     </None>
     <None Include="ABCCarTradersDataSet1.xss">
       <DependentUpon>ABCCarTradersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ABCCarTradersDataSet2.xsc">
+      <DependentUpon>ABCCarTradersDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ABCCarTradersDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABCCarTradersDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ABCCarTradersDataSet2.xss">
+      <DependentUpon>ABCCarTradersDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

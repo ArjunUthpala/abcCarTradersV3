@@ -24,10 +24,13 @@ namespace abcCarTradersV1
         int unitPrice;
         int TotAmount;
         int remainingQTY;
+        string CBrand = "";
+        string CModel = "";
         string imgPath = "";
         string orderType = "Car Part";
         string orderState = "Pending";
         string customer_NIC = Convert.ToString(UserStatic.NICNum);
+        CarDTO carDTO = new CarDTO();
         public CtrlCusCarPartOrder()
         {
             InitializeComponent();
@@ -36,6 +39,19 @@ namespace abcCarTradersV1
         private void CtrlCusCarPartOrder_Load(object sender, EventArgs e)
         {
             DisplayDataonLoad();
+
+            carDTO = CarDetailsBLL.GetAll();
+            comboBoxCarBrand.DataSource = carDTO.CarBrands;
+            comboBoxCarBrand.DisplayMember = "CarBrand";
+            comboBoxCarBrand.ValueMember = "CarBrand_ID";
+            comboBoxCarBrand.SelectedIndex = -1;
+
+
+            comboBoxCarModel.DataSource = carDTO.CarModels;
+            comboBoxCarModel.DisplayMember = "CarModel";
+            comboBoxCarModel.ValueMember = "CarModel_ID";
+            comboBoxCarModel.SelectedIndex = -1;
+            combofull = true;
         }
 
         void DisplayDataonLoad()
@@ -143,6 +159,32 @@ namespace abcCarTradersV1
             else
             {
                 MessageBox.Show("Please Select Quantity", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCarPartSearch_Click(object sender, EventArgs e)
+        {
+            CBrand = comboBoxCarBrand.Text;
+            CModel = comboBoxCarModel.Text;
+            List<tbl_car_part> CarPartDetails = new List<tbl_car_part>();
+            CarPartDetails = CarPartsDetailsBLL.SearchCarParts(CBrand,CModel);
+            dataGridViewCarPartsDetails.DataSource = CarPartDetails;
+            dataGridViewCarPartsDetails.AutoGenerateColumns = false;
+            dataGridViewCarPartsDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
+            dataGridViewCarPartsDetails.ColumnHeadersDefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
+            this.dataGridViewCarPartsDetails.Columns["tbl_inventory"].Visible = false;
+            this.dataGridViewCarPartsDetails.Columns["Part_ID"].Visible = false;
+        }
+
+
+        bool combofull = false;
+        private void comboBoxCarBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (combofull)
+            {
+                comboBoxCarModel.DataSource = carDTO.CarModels.Where(x => x.CarBrand_ID ==
+                Convert.ToInt32(comboBoxCarBrand.SelectedValue)).ToList();
             }
         }
     }

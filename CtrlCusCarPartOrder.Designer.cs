@@ -368,6 +368,7 @@
             this.comboBoxCarBrand.Name = "comboBoxCarBrand";
             this.comboBoxCarBrand.Size = new System.Drawing.Size(96, 28);
             this.comboBoxCarBrand.TabIndex = 108;
+            this.comboBoxCarBrand.SelectedIndexChanged += new System.EventHandler(this.comboBoxCarBrand_SelectedIndexChanged);
             // 
             // btnCarPartSearch
             // 
@@ -381,6 +382,7 @@
             this.btnCarPartSearch.TabIndex = 107;
             this.btnCarPartSearch.Text = "Search";
             this.btnCarPartSearch.UseVisualStyleBackColor = false;
+            this.btnCarPartSearch.Click += new System.EventHandler(this.btnCarPartSearch_Click);
             // 
             // label11
             // 

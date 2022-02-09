@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
+using DAL.DAO;
+using DAL.DTO;
+using System.IO;
 
 namespace abcCarTradersV1
 {
@@ -25,6 +30,11 @@ namespace abcCarTradersV1
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void CtrlAdminDash_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -27,6 +27,7 @@ namespace abcCarTradersV1
         string imgPath = "";
         string CBrand = "";
         string CModel = "";
+        int Model ;
         string orderType = "Car";
         string orderState = "Pending";
         string customer_NIC = Convert.ToString(UserStatic.NICNum);
@@ -189,14 +190,26 @@ namespace abcCarTradersV1
         {
             CBrand = comboBoxCarBrand.Text;
             CModel = comboBoxCarModel.Text;
+        //   Model = Convert.ToInt32(dateTimePicker2.Value);
             List<tbl_car> CarDetails = new List<tbl_car>();
-            CarDetails = CarDetailsBLL.SearchCarDetails(CBrand, CModel);
+               CarDetails = CarDetailsBLL.SearchCarDetails(CBrand, CModel);
+               dataGridViewCarDetails.DataSource = CarDetails;
+               dataGridViewCarDetails.AutoGenerateColumns = false;
+               dataGridViewCarDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
+               dataGridViewCarDetails.ColumnHeadersDefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
+               this.dataGridViewCarDetails.Columns["tbl_inventory"].Visible = false;
+               this.dataGridViewCarDetails.Columns["Car_ID"].Visible = false;
+
+      /*    List<tbl_car> CarDetails = new List<tbl_car>();
+            CarDetails = CarDetailsBLL.TestSearch(Model);
             dataGridViewCarDetails.DataSource = CarDetails;
             dataGridViewCarDetails.AutoGenerateColumns = false;
             dataGridViewCarDetails.DefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Regular);
             dataGridViewCarDetails.ColumnHeadersDefaultCellStyle.Font = new Font(Font.FontFamily, Font.Size, FontStyle.Bold);
             this.dataGridViewCarDetails.Columns["tbl_inventory"].Visible = false;
-            this.dataGridViewCarDetails.Columns["Car_ID"].Visible = false;
+            this.dataGridViewCarDetails.Columns["Car_ID"].Visible = false;*/
+
+
             /*     List<CarDetailsDTO> list = dto.Cars;
                  if (comboBoxBrand.SelectedIndex != -1)
                      list = list.Where(x => x.CarBrand == comboBoxBrand.Text).ToList();

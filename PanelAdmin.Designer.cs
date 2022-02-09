@@ -47,10 +47,10 @@
             this.CurrentTabIndicator = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.ctrlReports2 = new abcCarTradersV1.CtrlReports();
-            this.ctrlOrderDetails2 = new abcCarTradersV1.CtrlOrderDetails();
-            this.ctrlCarPartsDetails1 = new abcCarTradersV1.CtrlCarPartsDetails();
             this.ctrlCarDetails1 = new abcCarTradersV1.CtrlCarDetails();
+            this.ctrlCarPartsDetails1 = new abcCarTradersV1.CtrlCarPartsDetails();
+            this.ctrlOrderDetails2 = new abcCarTradersV1.CtrlOrderDetails();
+            this.ctrlReports2 = new abcCarTradersV1.CtrlReports();
             this.ctrlAdminDash1 = new abcCarTradersV1.CtrlAdminDash();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -300,25 +300,15 @@
             this.panel5.Size = new System.Drawing.Size(0, 662);
             this.panel5.TabIndex = 2;
             // 
-            // ctrlReports2
+            // ctrlCarDetails1
             // 
-            this.ctrlReports2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.ctrlReports2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlReports2.Location = new System.Drawing.Point(288, 76);
-            this.ctrlReports2.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrlReports2.Name = "ctrlReports2";
-            this.ctrlReports2.Size = new System.Drawing.Size(977, 626);
-            this.ctrlReports2.TabIndex = 3;
-            // 
-            // ctrlOrderDetails2
-            // 
-            this.ctrlOrderDetails2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.ctrlOrderDetails2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlOrderDetails2.Location = new System.Drawing.Point(288, 76);
-            this.ctrlOrderDetails2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ctrlOrderDetails2.Name = "ctrlOrderDetails2";
-            this.ctrlOrderDetails2.Size = new System.Drawing.Size(977, 626);
-            this.ctrlOrderDetails2.TabIndex = 4;
+            this.ctrlCarDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlCarDetails1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlCarDetails1.Location = new System.Drawing.Point(288, 76);
+            this.ctrlCarDetails1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlCarDetails1.Name = "ctrlCarDetails1";
+            this.ctrlCarDetails1.Size = new System.Drawing.Size(977, 626);
+            this.ctrlCarDetails1.TabIndex = 6;
             // 
             // ctrlCarPartsDetails1
             // 
@@ -330,15 +320,25 @@
             this.ctrlCarPartsDetails1.Size = new System.Drawing.Size(977, 626);
             this.ctrlCarPartsDetails1.TabIndex = 5;
             // 
-            // ctrlCarDetails1
+            // ctrlOrderDetails2
             // 
-            this.ctrlCarDetails1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.ctrlCarDetails1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlCarDetails1.Location = new System.Drawing.Point(288, 76);
-            this.ctrlCarDetails1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ctrlCarDetails1.Name = "ctrlCarDetails1";
-            this.ctrlCarDetails1.Size = new System.Drawing.Size(977, 626);
-            this.ctrlCarDetails1.TabIndex = 6;
+            this.ctrlOrderDetails2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlOrderDetails2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlOrderDetails2.Location = new System.Drawing.Point(288, 76);
+            this.ctrlOrderDetails2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctrlOrderDetails2.Name = "ctrlOrderDetails2";
+            this.ctrlOrderDetails2.Size = new System.Drawing.Size(977, 626);
+            this.ctrlOrderDetails2.TabIndex = 4;
+            // 
+            // ctrlReports2
+            // 
+            this.ctrlReports2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.ctrlReports2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlReports2.Location = new System.Drawing.Point(288, 76);
+            this.ctrlReports2.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlReports2.Name = "ctrlReports2";
+            this.ctrlReports2.Size = new System.Drawing.Size(977, 626);
+            this.ctrlReports2.TabIndex = 3;
             // 
             // ctrlAdminDash1
             // 
