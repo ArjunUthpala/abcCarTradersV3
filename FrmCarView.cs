@@ -32,7 +32,7 @@ namespace abcCarTradersV1
             txtEngineCapacity.Text = car.EngineCapacity;
             txtItemCode.Text = car.ItemCode;
             comboBoxCarModel.Text = car.CarModel;
-            dateTimePickerYOM.Value = Convert.ToDateTime(car.YOM);
+            txtYOM.Text = Convert.ToString(car.YOM);
             txtMilage.Text = Convert.ToString(car.Milage);
             comboBoxFuelType.Text = car.FuelType;
             comboBoxCondition.Text = car.Condition;

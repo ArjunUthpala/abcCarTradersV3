@@ -43,7 +43,6 @@
             this.btnCarPartsDetails = new System.Windows.Forms.Button();
             this.btnOrderDetails = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
-            this.btnDash = new System.Windows.Forms.Button();
             this.CurrentTabIndicator = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -52,6 +51,7 @@
             this.ctrlOrderDetails2 = new abcCarTradersV1.CtrlOrderDetails();
             this.ctrlReports2 = new abcCarTradersV1.CtrlReports();
             this.ctrlAdminDash1 = new abcCarTradersV1.CtrlAdminDash();
+            this.btnAdminHome = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -179,11 +179,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.btnAdminHome);
             this.panel2.Controls.Add(this.btnCarDetails);
             this.panel2.Controls.Add(this.btnCarPartsDetails);
             this.panel2.Controls.Add(this.btnOrderDetails);
             this.panel2.Controls.Add(this.btnReports);
-            this.panel2.Controls.Add(this.btnDash);
             this.panel2.Controls.Add(this.CurrentTabIndicator);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 58);
@@ -263,24 +263,6 @@
             this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // btnDash
-            // 
-            this.btnDash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.btnDash.FlatAppearance.BorderSize = 0;
-            this.btnDash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDash.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDash.ForeColor = System.Drawing.Color.White;
-            this.btnDash.Image = ((System.Drawing.Image)(resources.GetObject("btnDash.Image")));
-            this.btnDash.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDash.Location = new System.Drawing.Point(37, 21);
-            this.btnDash.Name = "btnDash";
-            this.btnDash.Size = new System.Drawing.Size(275, 51);
-            this.btnDash.TabIndex = 0;
-            this.btnDash.Text = "        Dashboard";
-            this.btnDash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDash.UseVisualStyleBackColor = false;
-            this.btnDash.Click += new System.EventHandler(this.btnDash_Click);
-            // 
             // CurrentTabIndicator
             // 
             this.CurrentTabIndicator.BackColor = System.Drawing.Color.SpringGreen;
@@ -351,6 +333,23 @@
             this.ctrlAdminDash1.Size = new System.Drawing.Size(978, 629);
             this.ctrlAdminDash1.TabIndex = 7;
             // 
+            // btnAdminHome
+            // 
+            this.btnAdminHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.btnAdminHome.FlatAppearance.BorderSize = 0;
+            this.btnAdminHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminHome.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminHome.ForeColor = System.Drawing.Color.White;
+            this.btnAdminHome.Image = ((System.Drawing.Image)(resources.GetObject("btnAdminHome.Image")));
+            this.btnAdminHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminHome.Location = new System.Drawing.Point(37, 21);
+            this.btnAdminHome.Name = "btnAdminHome";
+            this.btnAdminHome.Size = new System.Drawing.Size(238, 51);
+            this.btnAdminHome.TabIndex = 7;
+            this.btnAdminHome.Text = "        Home";
+            this.btnAdminHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminHome.UseVisualStyleBackColor = false;
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -389,7 +388,6 @@
         private System.Windows.Forms.Label labelBrand;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel CurrentTabIndicator;
-        private System.Windows.Forms.Button btnDash;
         private System.Windows.Forms.Button btnCarDetails;
         private System.Windows.Forms.Button btnCarPartsDetails;
         private System.Windows.Forms.Button btnOrderDetails;
@@ -411,6 +409,7 @@
         private CtrlCarPartsDetails ctrlCarPartsDetails1;
         private CtrlCarDetails ctrlCarDetails1;
         private CtrlAdminDash ctrlAdminDash1;
+        private System.Windows.Forms.Button btnAdminHome;
     }
 }
 

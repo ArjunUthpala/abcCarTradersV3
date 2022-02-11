@@ -16,5 +16,28 @@ namespace abcCarTradersV1
         {
             InitializeComponent();
         }
+
+        private void CtrlReports_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalesReport_Click(object sender, EventArgs e)
+        {
+            FrmSalesReport frmSales = new FrmSalesReport();
+            frmSales.Show();
+        }
+
+        private void btnRestockReport_Click(object sender, EventArgs e)
+        {
+            FrmPartsToBeReorderedReport frmRestock = new FrmPartsToBeReorderedReport();
+            frmRestock.Show();
+        }
+
+        private void btnOrderStateReport_Click(object sender, EventArgs e)
+        {
+            FrmOrderStateReport frmorderState = new FrmOrderStateReport();
+            frmorderState.Show();
+        }
     }
 }

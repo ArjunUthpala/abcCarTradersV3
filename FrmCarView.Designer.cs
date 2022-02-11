@@ -40,7 +40,6 @@ namespace abcCarTradersV1
             this.txtMilage = new System.Windows.Forms.TextBox();
             this.comboBoxTransmission = new System.Windows.Forms.ComboBox();
             this.comboBoxFuelType = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerYOM = new System.Windows.Forms.DateTimePicker();
             this.comboBoxCarBrand = new System.Windows.Forms.ComboBox();
             this.txtNoOfSeats = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@ namespace abcCarTradersV1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxCar = new System.Windows.Forms.PictureBox();
+            this.txtYOM = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,16 +198,6 @@ namespace abcCarTradersV1
             this.comboBoxFuelType.Name = "comboBoxFuelType";
             this.comboBoxFuelType.Size = new System.Drawing.Size(124, 29);
             this.comboBoxFuelType.TabIndex = 85;
-            // 
-            // dateTimePickerYOM
-            // 
-            this.dateTimePickerYOM.Enabled = false;
-            this.dateTimePickerYOM.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerYOM.Location = new System.Drawing.Point(196, 205);
-            this.dateTimePickerYOM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePickerYOM.Name = "dateTimePickerYOM";
-            this.dateTimePickerYOM.Size = new System.Drawing.Size(124, 27);
-            this.dateTimePickerYOM.TabIndex = 84;
             // 
             // comboBoxCarBrand
             // 
@@ -358,12 +348,23 @@ namespace abcCarTradersV1
             this.pictureBoxCar.TabIndex = 99;
             this.pictureBoxCar.TabStop = false;
             // 
+            // txtYOM
+            // 
+            this.txtYOM.Enabled = false;
+            this.txtYOM.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYOM.Location = new System.Drawing.Point(196, 205);
+            this.txtYOM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtYOM.Name = "txtYOM";
+            this.txtYOM.Size = new System.Drawing.Size(124, 27);
+            this.txtYOM.TabIndex = 100;
+            // 
             // FrmCarView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(901, 604);
+            this.Controls.Add(this.txtYOM);
             this.Controls.Add(this.pictureBoxCar);
             this.Controls.Add(this.comboBoxCarModel);
             this.Controls.Add(this.comboBoxCondition);
@@ -376,7 +377,6 @@ namespace abcCarTradersV1
             this.Controls.Add(this.txtMilage);
             this.Controls.Add(this.comboBoxTransmission);
             this.Controls.Add(this.comboBoxFuelType);
-            this.Controls.Add(this.dateTimePickerYOM);
             this.Controls.Add(this.comboBoxCarBrand);
             this.Controls.Add(this.txtNoOfSeats);
             this.Controls.Add(this.label12);
@@ -409,7 +409,6 @@ namespace abcCarTradersV1
         private System.Windows.Forms.TextBox txtMilage;
         private System.Windows.Forms.ComboBox comboBoxTransmission;
         private System.Windows.Forms.ComboBox comboBoxFuelType;
-        private System.Windows.Forms.DateTimePicker dateTimePickerYOM;
         private System.Windows.Forms.ComboBox comboBoxCarBrand;
         private System.Windows.Forms.TextBox txtNoOfSeats;
         private System.Windows.Forms.Label label12;
@@ -422,5 +421,6 @@ namespace abcCarTradersV1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBoxCar;
+        private System.Windows.Forms.TextBox txtYOM;
     }
 }

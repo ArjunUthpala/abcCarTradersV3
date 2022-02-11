@@ -51,7 +51,7 @@ namespace abcCarTradersV1
             comboBoxCarModel.DisplayMember = "CarModel";
             comboBoxCarModel.ValueMember = "CarModel_ID";
             comboBoxCarModel.SelectedIndex = -1;
-            combofull = true;
+          //  combofull = true;
         }
 
         void Clear()
@@ -60,7 +60,7 @@ namespace abcCarTradersV1
             txtPartName.Clear();
             comboBoxCarBrand.SelectedIndex = -1;
             comboBoxCarModel.SelectedIndex = -1;
-            dateTimePickerYOM.ResetText();
+            txtYOM.Clear();
             comboBoxCondition.SelectedIndex = -1;
             txtItemCode.Clear();
             txtImgPath.Clear();
@@ -68,6 +68,7 @@ namespace abcCarTradersV1
             txtQTY.Clear();
             txtPrice.Clear();
             dateTimePickerDateAdded.ResetText();
+            pictureBoxCarPart.Image = null;
         }
 
         void DisplayDataonLoad()
@@ -82,10 +83,11 @@ namespace abcCarTradersV1
             this.dataGridViewCarPartsDetails.Columns["tbl_inventory"].Visible = false;
         }
 
-        bool combofull = false;
+       // bool combofull = false;
         private void comboBoxCarBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combofull)
+            // if (combofull)
+            if (comboBoxCarBrand.SelectedIndex != -1)
             {
                 comboBoxCarModel.DataSource = carPartsDetailsDTO.CarModels.Where(x => x.CarBrand_ID ==
                 Convert.ToInt32(comboBoxCarBrand.SelectedValue)).ToList();
@@ -100,7 +102,7 @@ namespace abcCarTradersV1
             comboBoxPartBrand.Text = Convert.ToString(dataGridViewCarPartsDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
             comboBoxCarBrand.Text = Convert.ToString(dataGridViewCarPartsDetails.Rows[e.RowIndex].Cells[3].Value.ToString());
             comboBoxCarModel.Text = Convert.ToString(dataGridViewCarPartsDetails.Rows[e.RowIndex].Cells[4].Value.ToString());
-            dateTimePickerYOM.Value = Convert.ToDateTime(dataGridViewCarPartsDetails.Rows[e.RowIndex].Cells[5].Value.ToString());
+            txtYOM.Text = Convert.ToString(dataGridViewCarPartsDetails.Rows[e.RowIndex].Cells[5].Value.ToString());
             comboBoxCondition.Text = Convert.ToString(dataGridViewCarPartsDetails.Rows[e.RowIndex].Cells[6].Value.ToString());
             txtItemCode.Text = dataGridViewCarPartsDetails.Rows[e.RowIndex].Cells[7].Value.ToString();
             txtImgPath.Text = dataGridViewCarPartsDetails.Rows[e.RowIndex].Cells[8].Value.ToString();
@@ -175,7 +177,7 @@ namespace abcCarTradersV1
                 tbl_car_part carpart = new tbl_car_part();
                 carpart.CarBrand = Convert.ToString(comboBoxCarBrand.Text);
                 carpart.CarModel = Convert.ToString(comboBoxCarModel.Text);
-                carpart.YOM = Convert.ToDateTime(dateTimePickerYOM.Value);
+                carpart.YOM = Convert.ToInt32(txtYOM.Text);
                 carpart.PartBrandName = Convert.ToString(comboBoxPartBrand.Text);
                 carpart.CarPartName = txtPartName.Text;
                 carpart.ItemCode = txtItemCode.Text;
@@ -255,7 +257,7 @@ namespace abcCarTradersV1
                 }
                 carpart.CarBrand = Convert.ToString(comboBoxCarBrand.Text);
                 carpart.CarModel = Convert.ToString(comboBoxCarModel.Text);
-                carpart.YOM = Convert.ToDateTime(dateTimePickerYOM.Value);
+                carpart.YOM = Convert.ToInt32(txtYOM.Text);
                 carpart.PartBrandName = Convert.ToString(comboBoxPartBrand.Text);
                 carpart.CarPartName = txtPartName.Text;
                 carpart.Condition = Convert.ToString(comboBoxCondition.Text);
@@ -295,6 +297,12 @@ namespace abcCarTradersV1
                 string unique = Guid.NewGuid().ToString();
                 pictureName += unique + openFileDialog1.SafeFileName;
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+         //   pictureBoxCarPart.Image = null;
         }
     }
 }

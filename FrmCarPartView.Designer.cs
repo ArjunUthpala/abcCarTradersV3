@@ -39,12 +39,12 @@ namespace abcCarTradersV1
             this.label15 = new System.Windows.Forms.Label();
             this.txtPartName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePickerYOM = new System.Windows.Forms.DateTimePicker();
             this.comboBoxPartBrand = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxCarPart = new System.Windows.Forms.PictureBox();
+            this.txtYOM = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarPart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,16 +174,6 @@ namespace abcCarTradersV1
             this.label1.TabIndex = 104;
             this.label1.Text = "Car Parts Details";
             // 
-            // dateTimePickerYOM
-            // 
-            this.dateTimePickerYOM.Enabled = false;
-            this.dateTimePickerYOM.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerYOM.Location = new System.Drawing.Point(197, 322);
-            this.dateTimePickerYOM.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.dateTimePickerYOM.Name = "dateTimePickerYOM";
-            this.dateTimePickerYOM.Size = new System.Drawing.Size(123, 27);
-            this.dateTimePickerYOM.TabIndex = 109;
-            // 
             // comboBoxPartBrand
             // 
             this.comboBoxPartBrand.DisplayMember = "CarBrand";
@@ -245,12 +235,23 @@ namespace abcCarTradersV1
             this.pictureBoxCarPart.TabIndex = 119;
             this.pictureBoxCarPart.TabStop = false;
             // 
+            // txtYOM
+            // 
+            this.txtYOM.Enabled = false;
+            this.txtYOM.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYOM.Location = new System.Drawing.Point(198, 323);
+            this.txtYOM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtYOM.Name = "txtYOM";
+            this.txtYOM.Size = new System.Drawing.Size(124, 27);
+            this.txtYOM.TabIndex = 120;
+            // 
             // FrmCarPartView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(744, 455);
+            this.Controls.Add(this.txtYOM);
             this.Controls.Add(this.pictureBoxCarPart);
             this.Controls.Add(this.comboBoxCarModel);
             this.Controls.Add(this.comboBoxCarBrand);
@@ -262,7 +263,6 @@ namespace abcCarTradersV1
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtPartName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePickerYOM);
             this.Controls.Add(this.comboBoxPartBrand);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -287,11 +287,11 @@ namespace abcCarTradersV1
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtPartName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerYOM;
         private System.Windows.Forms.ComboBox comboBoxPartBrand;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBoxCarPart;
+        private System.Windows.Forms.TextBox txtYOM;
     }
 }

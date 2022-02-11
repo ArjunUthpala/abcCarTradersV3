@@ -71,7 +71,7 @@ namespace abcCarTradersV1
             Car_id = Convert.ToInt32(dataGridViewCarDetails.Rows[e.RowIndex].Cells[0].Value.ToString());
             comboBoxCarBrand.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[1].Value.ToString());
             comboBoxCarModel.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[2].Value.ToString());
-            dateTimePickerYOM.Value = Convert.ToDateTime(dataGridViewCarDetails.Rows[e.RowIndex].Cells[3].Value.ToString());
+            txtYOM.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[3].Value.ToString());
             comboBoxCondition.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[4].Value.ToString());
             comboBoxFuelType.Text = Convert.ToString(dataGridViewCarDetails.Rows[e.RowIndex].Cells[5].Value.ToString());
             txtMilage.Text = dataGridViewCarDetails.Rows[e.RowIndex].Cells[6].Value.ToString();
@@ -173,7 +173,7 @@ namespace abcCarTradersV1
                 tbl_car car = new tbl_car();
                 car.CarBrand = Convert.ToString(comboBoxCarBrand.Text);
                 car.CarModel = Convert.ToString(comboBoxCarModel.Text);
-                car.YOM = Convert.ToDateTime(dateTimePickerYOM.Value);
+                car.YOM = Convert.ToInt32(txtYOM.Text);
                 car.FuelType = Convert.ToString(comboBoxFuelType.Text);
                 car.Milage = Convert.ToInt32(txtMilage.Text);
                 car.Transmission = Convert.ToString(comboBoxTransmission.Text);
@@ -279,7 +279,7 @@ namespace abcCarTradersV1
                 }
                 car.CarBrand = Convert.ToString(comboBoxCarBrand.Text);
                 car.CarModel = Convert.ToString(comboBoxCarModel.Text);
-                car.YOM = Convert.ToDateTime(dateTimePickerYOM.Value);
+                car.YOM = Convert.ToInt32(txtYOM.Text);
                 car.FuelType = Convert.ToString(comboBoxFuelType.Text);
                 car.Milage = Convert.ToInt32(txtMilage.Text);
                 car.Transmission = Convert.ToString(comboBoxTransmission.Text);
@@ -321,7 +321,6 @@ namespace abcCarTradersV1
         {
             comboBoxCarBrand.SelectedIndex = -1;
             comboBoxCarModel.SelectedIndex = -1;
-            dateTimePickerYOM.ResetText();
             comboBoxCondition.SelectedIndex = -1;
             comboBoxFuelType.SelectedIndex = -1;
             txtMilage.Clear();
@@ -331,10 +330,12 @@ namespace abcCarTradersV1
             txtNoOfSeats.Clear();
             txtItemCode.Clear();
             txtImgPath.Clear();
+            txtYOM.Clear();
 
             txtQTY.Clear();
             txtPrice.Clear();
             dateTimePickerDateAdded.ResetText();
+            pictureBoxCar.Image = null;
         }
 
       
@@ -347,9 +348,7 @@ namespace abcCarTradersV1
             {
                 comboBoxCarModel.DataSource = carDTO.CarModels.Where(x => x.CarBrand_ID ==
                 Convert.ToInt32(comboBoxCarBrand.SelectedValue)).ToList();
-                // Convert.ToInt32(cmbDepartment.SelectedValue)).ToList();
-                //int carbrand_id = Convert.ToInt32(comboBoxCarBrand.ValueMember);
-                // comboBoxCarModel.DataSource = CarDetailsDTO.CarModels.Where(x => x.CarBrand_ID== carbrand_id).ToList();
+              
 
             }
            
@@ -365,6 +364,12 @@ namespace abcCarTradersV1
                 string unique = Guid.NewGuid().ToString();
                 pictureName += unique + openFileDialog1.SafeFileName;
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+           // pictureBoxCar.Image = null;
         }
     }
 }

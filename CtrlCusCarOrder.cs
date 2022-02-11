@@ -27,7 +27,7 @@ namespace abcCarTradersV1
         string imgPath = "";
         string CBrand = "";
         string CModel = "";
-        int Model ;
+      //  int Model ;
         string orderType = "Car";
         string orderState = "Pending";
         string customer_NIC = Convert.ToString(UserStatic.NICNum);

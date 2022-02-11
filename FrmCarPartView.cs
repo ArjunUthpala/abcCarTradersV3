@@ -33,7 +33,7 @@ namespace abcCarTradersV1
             comboBoxCarModel.Text = part.CarModel;
             comboBoxPartBrand.Text = part.PartBrandName;
             txtPartName.Text = part.CarPartName;
-            dateTimePickerYOM.Value = Convert.ToDateTime(part.YOM);
+            txtYOM.Text = Convert.ToString(part.YOM);
             comboBoxCondition.Text = part.Condition;
 
             imgPath = Application.StartupPath + "\\images\\" + part.ImagePath;

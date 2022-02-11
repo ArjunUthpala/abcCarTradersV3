@@ -48,7 +48,6 @@
             this.txtMilage = new System.Windows.Forms.TextBox();
             this.comboBoxTransmission = new System.Windows.Forms.ComboBox();
             this.comboBoxFuelType = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerYOM = new System.Windows.Forms.DateTimePicker();
             this.comboBoxCarBrand = new System.Windows.Forms.ComboBox();
             this.tblcarbrandsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aBCCarTradersDataSet1 = new abcCarTradersV1.ABCCarTradersDataSet1();
@@ -74,6 +73,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnBrowseImg = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtYOM = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.aBCCarTradersDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblcarbrandsBindingSource1)).BeginInit();
@@ -276,15 +277,6 @@
             this.comboBoxFuelType.Name = "comboBoxFuelType";
             this.comboBoxFuelType.Size = new System.Drawing.Size(124, 29);
             this.comboBoxFuelType.TabIndex = 45;
-            // 
-            // dateTimePickerYOM
-            // 
-            this.dateTimePickerYOM.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerYOM.Location = new System.Drawing.Point(187, 158);
-            this.dateTimePickerYOM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePickerYOM.Name = "dateTimePickerYOM";
-            this.dateTimePickerYOM.Size = new System.Drawing.Size(124, 27);
-            this.dateTimePickerYOM.TabIndex = 43;
             // 
             // comboBoxCarBrand
             // 
@@ -572,11 +564,34 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // txtYOM
+            // 
+            this.txtYOM.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYOM.Location = new System.Drawing.Point(187, 157);
+            this.txtYOM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtYOM.Name = "txtYOM";
+            this.txtYOM.Size = new System.Drawing.Size(124, 27);
+            this.txtYOM.TabIndex = 72;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Coral;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(723, 294);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(93, 40);
+            this.btnClear.TabIndex = 73;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // CtrlCarDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.txtYOM);
             this.Controls.Add(this.btnBrowseImg);
             this.Controls.Add(this.txtImgPath);
             this.Controls.Add(this.label16);
@@ -597,7 +612,6 @@
             this.Controls.Add(this.txtMilage);
             this.Controls.Add(this.comboBoxTransmission);
             this.Controls.Add(this.comboBoxFuelType);
-            this.Controls.Add(this.dateTimePickerYOM);
             this.Controls.Add(this.comboBoxCarBrand);
             this.Controls.Add(this.txtNoOfSeats);
             this.Controls.Add(this.label12);
@@ -648,7 +662,6 @@
         private System.Windows.Forms.TextBox txtMilage;
         private System.Windows.Forms.ComboBox comboBoxTransmission;
         private System.Windows.Forms.ComboBox comboBoxFuelType;
-        private System.Windows.Forms.DateTimePicker dateTimePickerYOM;
         private System.Windows.Forms.ComboBox comboBoxCarBrand;
         private System.Windows.Forms.BindingSource tblcarbrandsBindingSource1;
         private ABCCarTradersDataSet1 aBCCarTradersDataSet1;
@@ -674,5 +687,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnBrowseImg;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtYOM;
+        private System.Windows.Forms.Button btnClear;
     }
 }

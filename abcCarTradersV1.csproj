@@ -33,8 +33,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -122,6 +155,35 @@
     <Compile Include="CtrlSignIn.Designer.cs">
       <DependentUpon>CtrlSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Frmtest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmtest.Designer.cs">
+      <DependentUpon>Frmtest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOrderStateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOrderStateReport.Designer.cs">
+      <DependentUpon>FrmOrderStateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPartsToBeReorderedReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPartsToBeReorderedReport.Designer.cs">
+      <DependentUpon>FrmPartsToBeReorderedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalesReport.Designer.cs">
+      <DependentUpon>FrmSalesReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCarPartView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,7 +228,16 @@
     <Compile Include="CtrlReports.Designer.cs">
       <DependentUpon>CtrlReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalesDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UserStatic.cs" />
+    <EmbeddedResource Include="Frmtest.resx">
+      <DependentUpon>Frmtest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrlCarDetails.resx">
       <DependentUpon>CtrlCarDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +268,15 @@
     <EmbeddedResource Include="CtrlSignIn.resx">
       <DependentUpon>CtrlSignIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmOrderStateReport.resx">
+      <DependentUpon>FrmOrderStateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPartsToBeReorderedReport.resx">
+      <DependentUpon>FrmPartsToBeReorderedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalesReport.resx">
+      <DependentUpon>FrmSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCarPartView.resx">
       <DependentUpon>FrmCarPartView.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +295,7 @@
     <EmbeddedResource Include="CtrlOrderDetails.resx">
       <DependentUpon>CtrlOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PartsToBeReordered.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -227,6 +308,8 @@
     <EmbeddedResource Include="CtrlReports.resx">
       <DependentUpon>CtrlReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="SalesDetails.rdlc" />
     <None Include="ABCCarTradersDataSet.xsc">
       <DependentUpon>ABCCarTradersDataSet.xsd</DependentUpon>
     </None>
@@ -260,6 +343,20 @@
     <None Include="ABCCarTradersDataSet2.xss">
       <DependentUpon>ABCCarTradersDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\abcCarTradersV1.DataSet1TableAdapters.tbl_cus_order_stateTableAdapter.datasource" />
+    <None Include="Properties\DataSources\CtrlCusDetails.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -269,6 +366,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SalesDataset.xsc">
+      <DependentUpon>SalesDataset.xsd</DependentUpon>
+    </None>
+    <None Include="SalesDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SalesDataset.xss">
+      <DependentUpon>SalesDataset.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -282,6 +390,25 @@
       <Project>{f8ec65ff-c6b0-43b7-97d7-ded21b5260da}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

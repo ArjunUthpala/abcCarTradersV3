@@ -15,15 +15,15 @@ namespace abcCarTradersV1
         public AdminPanel()
         {
             InitializeComponent();
-            CurrentTabIndicator.Height = btnDash.Height;
-            CurrentTabIndicator.Top = btnDash.Top;
+            CurrentTabIndicator.Height = btnAdminHome.Height;
+            CurrentTabIndicator.Top = btnAdminHome.Top;
             ctrlAdminDash1.BringToFront();
         }
 
         private void btnDash_Click(object sender, EventArgs e)
         {
-            CurrentTabIndicator.Height = btnDash.Height;
-            CurrentTabIndicator.Top = btnDash.Top;
+            CurrentTabIndicator.Height = btnAdminHome.Height;
+            CurrentTabIndicator.Top = btnAdminHome.Top;
             ctrlAdminDash1.BringToFront();
         }
 

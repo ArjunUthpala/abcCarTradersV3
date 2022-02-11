@@ -72,7 +72,7 @@ namespace abcCarTradersV1
         {
             comboBoxOrderState.SelectedIndex = -1;
            
-            txtOrderID.Clear();
+       //     txtOrderID.Clear();
             txtOrderIDDisplay.Clear();
             txtItemCode.Clear();
             txtOrderType.Clear();

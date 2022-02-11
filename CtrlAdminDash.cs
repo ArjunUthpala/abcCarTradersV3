@@ -22,19 +22,6 @@ namespace abcCarTradersV1
             InitializeComponent();
         }
 
-        private void groupBox7_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CtrlAdminDash_Load(object sender, EventArgs e)
-        {
-           
-        }
+     
     }
 }
